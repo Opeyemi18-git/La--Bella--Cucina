@@ -5,6 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Menu | Trattoria Luminosa</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    main.menu {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .menu-category {
+      margin-bottom: 2rem;
+    }
+    .menu-category h3 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .menu-item {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      padding: 1rem;
+    }
+    .menu-item img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -24,11 +84,11 @@
       <h3>Appetizers</h3>
       <div class="menu-items">
         <div class="menu-item">
-          <img src="images/bruschetta.jpg" alt="Bruschetta" />
+          <img src="images/bruschetta.jpg" alt="Bruschetta">
           <p><strong>Bruschetta</strong> - Fresh tomatoes, garlic, and basil on grilled bread</p>
         </div>
         <div class="menu-item">
-          <img src="images/caprese.jpg" alt="Caprese Salad" />
+          <img src="images/caprese.jpg" alt="Caprese Salad">
           <p><strong>Caprese Salad</strong> - Tomatoes, mozzarella, basil, and olive oil</p>
         </div>
       </div>
@@ -38,11 +98,11 @@
       <h3>Main Courses</h3>
       <div class="menu-items">
         <div class="menu-item">
-          <img src="images/lasagna.jpg" alt="Lasagna" />
+          <img src="images/lasagna.jpg" alt="Lasagna">
           <p><strong>Lasagna</strong> - Layers of pasta with beef, ricotta, and marinara</p>
         </div>
         <div class="menu-item">
-          <img src="images/carbonara.jpg" alt="Spaghetti Carbonara" />
+          <img src="images/carbonara.jpg" alt="Spaghetti Carbonara">
           <p><strong>Spaghetti Carbonara</strong> - Pasta with pancetta, eggs, and parmesan</p>
         </div>
       </div>
@@ -52,11 +112,11 @@
       <h3>Desserts</h3>
       <div class="menu-items">
         <div class="menu-item">
-          <img src="images/tiramisu.jpg" alt="Tiramisu" />
+          <img src="images/tiramisu.jpg" alt="Tiramisu">
           <p><strong>Tiramisu</strong> - Coffee-soaked ladyfingers with mascarpone cream</p>
         </div>
         <div class="menu-item">
-          <img src="images/pannacotta.jpg" alt="Panna Cotta" />
+          <img src="images/pannacotta.jpg" alt="Panna Cotta">
           <p><strong>Panna Cotta</strong> - Silky cream pudding with berry sauce</p>
         </div>
       </div>
@@ -66,15 +126,15 @@
       <h3>Beverages</h3>
       <div class="menu-items">
         <div class="menu-item">
-          <img src="images/coffee.jpg" alt="Italian Coffee" />
+          <img src="images/coffee.jpg" alt="Italian Coffee">
           <p><strong>Italian Coffee</strong></p>
         </div>
         <div class="menu-item">
-          <img src="images/wine.jpg" alt="Chianti Red Wine" />
+          <img src="images/wine.jpg" alt="Chianti Red Wine">
           <p><strong>Chianti Red Wine</strong></p>
         </div>
         <div class="menu-item">
-          <img src="images/sparkling-water.jpg" alt="San Pellegrino" />
+          <img src="images/sparkling-water.jpg" alt="San Pellegrino">
           <p><strong>San Pellegrino Sparkling Water</strong></p>
         </div>
       </div>
