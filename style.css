@@ -141,3 +141,11 @@ nav a:hover {
 body {
   animation: fadeIn 1.5s ease-in;
 }
+nav a {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6347; /* Tomato or any highlight color */
+  transform: scale(1.1);
+}
