@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -13,7 +12,6 @@ body {
   background-color: #fefefe;
   color: #333;
 }
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -21,45 +19,37 @@ body {
   background-color: #fffaf0;
   color: #333;
 }
-
 header, footer {
   background-color: #8b0000;
   color: white;
   padding: 20px;
   text-align: center;
 }
-
 nav {
   background-color: #e0b04b;
   padding: 10px;
   text-align: center;
 }
-
 nav a {
   color: #333;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
 }
-
 nav a:hover {
   color: #8b0000;
 }
-
 main {
   padding: 20px;
   max-width: 900px;
   margin: auto;
 }
-
 section {
   margin-bottom: 30px;
 }
-
 h1, h2, h3 {
   color: #8b0000;
 }
-
 button {
   background-color: #8b0000;
   color: white;
@@ -68,7 +58,6 @@ button {
   cursor: pointer;
   border-radius: 4px;
 }
-
 button:hover {
   background-color: #a80000;
 }
@@ -79,14 +68,12 @@ nav {
   background-color: #333;
   padding: 10px;
 }
-
 nav a {
   color: white;
   padding: 10px;
   text-decoration: none;
   text-align: center;
 }
-
 nav a:hover {
   background-color: #555;
 }
@@ -96,12 +83,10 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
   }
-
   nav a {
     width: 100%;
     padding: 15px 0;
   }
-
   main {
     font-size: 1rem;
   }
@@ -114,12 +99,10 @@ nav a:hover {
     align-items: center;
     gap: 10px;
   }
-
   main, header, footer {
     padding: 10px;
     text-align: center;
   }
-
   form input[type="text"],
   form input[type="email"],
   form textarea {
@@ -127,7 +110,6 @@ nav a:hover {
     max-width: 400px;
     box-sizing: border-box;
   }
-
   nav a {
     font-size: 1.2em;
   }
@@ -137,14 +119,12 @@ nav a:hover {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 body {
   animation: fadeIn 1.5s ease-in;
 }
 nav a {
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
 nav a:hover {
   color: #ff6347; /* Tomato or any highlight color */
   transform: scale(1.1);
@@ -157,8 +137,67 @@ input[type="submit"] {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 input[type="submit"]:hover {
   background-color: #e5533d;
   transform: scale(1.05);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* Default nav styles */
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* Responsive nav styles */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+/* Adjust font size for smaller screens */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  main {
+    padding: 10px;
+  }
+}
+form {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  form {
+    padding: 10px;
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
