@@ -8,88 +8,100 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fffaf3;
       margin: 0;
       padding: 0;
+      background: #fff8f0;
+      color: #333;
     }
-    header {
+
+    header, footer {
       background-color: #8b0000;
       color: white;
-      padding: 20px;
+      padding: 1rem;
       text-align: center;
     }
+
     nav a {
-      margin: 0 15px;
-      color: white;
+      margin: 0 1rem;
+      color: #fff;
       text-decoration: none;
-    }
-    main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-      flex-direction: column;
-    }
-    form {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 30px;
-      width: 100%;
-      max-width: 500px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    label {
       font-weight: bold;
-      margin-top: 15px;
-      display: block;
     }
-    input, textarea {
+
+    main {
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+      background: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
-      margin-bottom: 15px;
+      border-radius: 4px;
       border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
+      box-sizing: border-box;
     }
-    input[type="submit"] {
+
+    form button {
+      margin-top: 1.5rem;
       background-color: #8b0000;
       color: white;
+      padding: 0.75rem 1.5rem;
       border: none;
+      border-radius: 4px;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      width: 100%;
     }
-    input[type="submit"]:hover {
+
+    form button:hover {
       background-color: #a30000;
     }
-    footer {
-      background-color: #8b0000;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      position: relative;
-      bottom: 0;
-      width: 100%;
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 1rem;
+      }
     }
   </style>
   <script>
     function validateForm() {
-      const name = document.getElementById("name");
-      const email = document.getElementById("email");
-      const message = document.getElementById("message");
-      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
 
-      if (!name.value || !email.value || !message.value) {
-        alert("All fields are required.");
+      if (!name || !email || !message) {
+        alert("Please fill out all fields.");
         return false;
       }
 
-      if (!email.value.match(emailPattern)) {
-        alert("Please enter a valid email address.");
+      if (!email.match(emailPattern)) {
+        alert("Enter a valid email address.");
         return false;
       }
 
-      alert("Thank you! Your message has been sent.");
+      alert("Thank you for contacting Trattoria Luminosa!");
       return true;
     }
   </script>
@@ -101,24 +113,23 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
-      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
     </nav>
   </header>
 
   <main>
-    <h2>We'd love to hear from you!</h2>
     <form name="contactForm" onsubmit="return validateForm()" aria-label="Contact form">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required aria-required="true" />
+      <input type="text" id="name" name="name" required />
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required aria-required="true" />
+      <input type="email" id="email" name="email" required />
 
       <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-      <input type="submit" value="Send Message" />
+      <button type="submit">Submit</button>
     </form>
   </main>
 
