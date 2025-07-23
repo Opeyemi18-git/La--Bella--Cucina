@@ -1,24 +1,21 @@
-// form.js
+document.addEventListener("DOMContentLoaded", function () {
+  document.forms["contactForm"].onsubmit = function () {
+    const name = this["name"].value;
+    const email = this["email"].value;
+    const message = this["message"].value;
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('form'); // grabs the form on the page
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // stops the form from submitting immediately
-
-    // Get values from input fields
-    const name = form.querySelector('input[name="name"]').value.trim();
-    const email = form.querySelector('input[name="email"]').value.trim();
-    const message = form.querySelector('textarea[name="message"]').value.trim();
-
-    // Check if any fields are empty
-    if (!name || !email || !message) {
-      alert('Please fill in all fields.');
-      return;
+    if (name === "" || email === "" || message === "") {
+      alert("All fields must be filled out");
+      return false;
     }
 
-    // If all fields are filled
-    alert(`Thank you, ${name}! Your message has been sent.`);
-    form.reset(); // clears the form
-  });
+    if (!email.match(emailPattern)) {
+      alert("Please enter a valid email address");
+      return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+  };
 });
