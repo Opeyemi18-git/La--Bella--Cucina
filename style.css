@@ -1,40 +1,128 @@
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-height: 500px;
-  object-fit: cover;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.intro {
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9f9f9; /* Light gray background */
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #b22222; /* Deep red for appetite stimulation */
+  color: white;
   text-align: center;
-  padding: 40px 20px;
-  background: #fff8f0;
+  padding: 30px 15px;
 }
 
-.intro h2 {
-  font-size: 2em;
+header h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.intro p {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+header p {
+  font-size: 1.2rem;
 }
 
-.button {
-  background-color: #b22222;
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffaf0; /* Warm creamy beige */
+  padding: 40px 20px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  max-width: 600px;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  color: #b22222;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #ff6347; /* Tomato red for a warm, vibrant feel */
   color: white;
-  padding: 12px 25px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 6px;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
-.button:hover {
-  background-color: #8b1a1a;
+.btn:hover {
+  background-color: #e5533c;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.feature {
+  flex: 1 1 300px;
+  margin: 15px;
+  background: #fdfdfd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.feature h3 {
+  color: #b22222;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #f5f5f5;
+  color: #444;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #b22222;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
