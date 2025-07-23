@@ -106,3 +106,29 @@ nav a:hover {
     font-size: 1rem;
   }
 }
+/* Responsive design for screens smaller than 768px */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  main, header, footer {
+    padding: 10px;
+    text-align: center;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+
+  nav a {
+    font-size: 1.2em;
+  }
+}
