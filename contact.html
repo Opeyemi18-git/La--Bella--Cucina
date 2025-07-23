@@ -5,127 +5,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Trattoria Luminosa</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="form.css" />
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fefefe;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf3;
       margin: 0;
       padding: 0;
     }
-
     header {
-      background-color: #8B0000;
+      background-color: #8b0000;
       color: white;
       padding: 20px;
       text-align: center;
     }
-
     nav a {
       margin: 0 15px;
       color: white;
       text-decoration: none;
     }
-
     main {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      flex-direction: column;
     }
-
-    form label {
-      display: block;
-      margin-top: 15px;
+    form {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    label {
       font-weight: bold;
+      margin-top: 15px;
+      display: block;
     }
-
-    form input[type="text"],
-    form textarea {
+    input, textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
+      margin-bottom: 15px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 5px;
       font-size: 1rem;
     }
-
-    form input[type="submit"] {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #8B0000;
+    input[type="submit"] {
+      background-color: #8b0000;
       color: white;
       border: none;
-      border-radius: 4px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-
-    form input[type="submit"]:hover {
-      background-color: #a31f1f;
+    input[type="submit"]:hover {
+      background-color: #a30000;
     }
-
     footer {
+      background-color: #8b0000;
+      color: white;
       text-align: center;
-      padding: 20px;
-      background-color: #f4f4f4;
-      color: #666;
+      padding: 10px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
     }
   </style>
-
   <script>
     function validateForm() {
-      const name = document.forms["contactForm"]["name"].value;
-      const email = document.forms["contactForm"]["email"].value;
-      const message = document.forms["contactForm"]["message"].value;
-      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+      const name = document.getElementById("name");
+      const email = document.getElementById("email");
+      const message = document.getElementById("message");
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-      if (name === "" || email === "" || message === "") {
-        alert("All fields must be filled out");
+      if (!name.value || !email.value || !message.value) {
+        alert("All fields are required.");
         return false;
       }
 
-      if (!email.match(emailPattern)) {
-        alert("Please enter a valid email address");
+      if (!email.value.match(emailPattern)) {
+        alert("Please enter a valid email address.");
         return false;
       }
 
-      alert("Thank you for your message!");
+      alert("Thank you! Your message has been sent.");
       return true;
     }
   </script>
 </head>
-
 <body>
+
   <header>
     <h1>Contact Trattoria Luminosa</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
-      <a href="contact.html">Contact</a>
       <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main>
-    <h2>We’d love to hear from you!</h2>
-    <form name="contactForm" onsubmit="return validateForm()">
+    <h2>We'd love to hear from you!</h2>
+    <form name="contactForm" onsubmit="return validateForm()" aria-label="Contact form">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+      <input type="text" id="name" name="name" required aria-required="true" />
 
       <label for="email">Email:</label>
-      <input type="text" id="email" name="email" required />
+      <input type="email" id="email" name="email" required aria-required="true" />
 
       <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
+      <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
 
-      <input type="submit" value="Submit Message" />
+      <input type="submit" value="Send Message" />
     </form>
   </main>
 
   <footer>
     <p>&copy; 2025 Trattoria Luminosa. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
