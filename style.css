@@ -72,3 +72,21 @@ button {
 button:hover {
   background-color: #a80000;
 }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  background-color: #555;
+}
