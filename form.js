@@ -1,16 +1,24 @@
+// form.js
+
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contactForm');
-  const greeting = document.getElementById('greeting');
+  const form = document.querySelector('form'); // grabs the form on the page
 
-  // Show today's date
-  const today = new Date();
-  const datePara = document.createElement('p');
-  datePara.innerText = `Today’s Date: ${today.toDateString()}`;
-  document.body.insertBefore(datePara, form);
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // stops the form from submitting immediately
 
-  // Fade in animation
-  form.style.opacity = 0;
-  form.style.transition = "opacity 1.5s ease-in";
-  setTimeout(() => {
-    form.style.opacity = 1;
-  }, 300);
+    // Get values from input fields
+    const name = form.querySelector('input[name="name"]').value.trim();
+    const email = form.querySelector('input[name="email"]').value.trim();
+    const message = form.querySelector('textarea[name="message"]').value.trim();
+
+    // Check if any fields are empty
+    if (!name || !email || !message) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    // If all fields are filled
+    alert(`Thank you, ${name}! Your message has been sent.`);
+    form.reset(); // clears the form
+  });
+});
