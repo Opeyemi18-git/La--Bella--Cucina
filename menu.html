@@ -2,161 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Menu | Trattoria Luminosa</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fffaf5;
-      color: #333;
-    }
-    header, footer {
-      background-color: #512d1a;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #f0e6d6;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      border-bottom: 2px solid #d4a373;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .menu-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1.5rem;
-    }
-    .menu-item img {
-      width: 150px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-right: 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    .menu-item-details {
-      flex: 1;
-    }
-    .price {
-      font-weight: bold;
-      color: #8b0000;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu - Trattoria Luminosa</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Trattoria Luminosa Menu</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About</a>
-    </nav>
+    <h1>Our Menu</h1>
+    <p>Authentic Italian cuisine freshly prepared for you.</p>
   </header>
 
-  <main>
-    <section>
-      <h2>Appetizers</h2>
-      <div class="menu-item">
-        <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/bruschetta-1951747_1280.jpg" alt="Bruschetta" />
-        <div class="menu-item-details">
-          <p>Bruschetta - Fresh tomatoes, garlic, and basil on grilled bread</p>
-          <p class="price">£4.50</p>
-        </div>
-      </div>
-      <div class="menu-item">
-        <img src="https://cdn.pixabay.com/photo/2017/08/10/07/32/caprese-2615111_1280.jpg" alt="Caprese Salad" />
-        <div class="menu-item-details">
-          <p>Caprese Salad - Tomatoes, mozzarella, basil, and olive oil</p>
-          <p class="price">£5.00</p>
-        </div>
-      </div>
-    </section>
+  <main class="menu-container">
+    <div class="menu-item">
+      <img src="images/spaghetti.jpg" alt="Spaghetti Carbonara">
+      <h2>Spaghetti Carbonara</h2>
+      <p>Creamy egg sauce, pancetta, Parmesan, and pepper.</p>
+      <p class="price">£10.99</p>
+    </div>
 
-    <section>
-      <h2>Main Courses</h2>
-      <div class="menu-item">
-        <img src="https://cdn.pixabay.com/photo/2017/03/17/10/39/lasagna-2157245_1280.jpg" alt="Lasagna" />
-        <div class="menu-item-details">
-          <p>Lasagna - Layers of pasta with beef, ricotta, and marinara</p>
-          <p class="price">£9.95</p>
-        </div>
-      </div>
-      <div class="menu-item">
-        <img src="https://cdn.pixabay.com/photo/2020/04/22/14/20/spaghetti-5075419_1280.jpg" alt="Spaghetti Carbonara" />
-        <div class="menu-item-details">
-          <p>Spaghetti Carbonara - Pasta with pancetta, eggs, and parmesan</p>
-          <p class="price">£8.75</p>
-        </div>
-      </div>
-    </section>
+    <div class="menu-item">
+      <img src="images/lasagna.jpg" alt="Beef Lasagna">
+      <h2>Beef Lasagna</h2>
+      <p>Layers of pasta, beef ragu, béchamel, and cheese.</p>
+      <p class="price">£12.50</p>
+    </div>
 
-    <section>
-      <h2>Desserts</h2>
-      <div class="menu-item">
-        <img src="https://cdn.pixabay.com/photo/2017/01/06/20/49/tiramisu-1952023_1280.jpg" alt="Tiramisu" />
-        <div class="menu-item-details">
-          <p>Tiramisu - Coffee-soaked ladyfingers with mascarpone cream</p>
-          <p class="price">£4.25</p>
-        </div>
-      </div>
-      <div class="menu-item">
-        <img src="https://cdn.pixabay.com/photo/2017/02/20/15/29/panna-cotta-2081456_1280.jpg" alt="Panna Cotta" />
-        <div class="menu-item-details">
-          <p>Panna Cotta - Silky cream pudding with berry sauce</p>
-          <p class="price">£4.00</p>
-        </div>
-      </div>
-    </section>
+    <div class="menu-item">
+      <img src="images/margherita.jpg" alt="Margherita Pizza">
+      <h2>Margherita Pizza</h2>
+      <p>Tomato base, fresh mozzarella, and basil.</p>
+      <p class="price">£9.75</p>
+    </div>
 
-    <section>
-      <h2>Beverages</h2>
-      <div class="menu-item">
-        <img src="https://cdn.pixabay.com/photo/2016/02/19/11/19/coffee-1209864_1280.jpg" alt="Italian Coffee" />
-        <div class="menu-item-details">
-          <p>Italian Coffee</p>
-          <p class="price">£2.50</p>
-        </div>
-      </div>
-      <div class="menu-item">
-        <img src="https://cdn.pixabay.com/photo/2016/06/15/19/58/cheers-1453554_1280.jpg" alt="Chianti Red Wine" />
-        <div class="menu-item-details">
-          <p>Chianti Red Wine (glass)</p>
-          <p class="price">£5.00</p>
-        </div>
-      </div>
-      <div class="menu-item">
-        <img src="https://cdn.pixabay.com/photo/2015/09/22/15/45/sparkling-water-949364_1280.jpg" alt="San Pellegrino Water" />
-        <div class="menu-item-details">
-          <p>San Pellegrino Sparkling Water</p>
-          <p class="price">£1.95</p>
-        </div>
-      </div>
-    </section>
+    <div class="menu-item">
+      <img src="images/tiramisu.jpg" alt="Tiramisu">
+      <h2>Tiramisu</h2>
+      <p>Espresso-soaked ladyfingers, mascarpone cream, cocoa dusting.</p>
+      <p class="price">£6.00</p>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Trattoria Luminosa | London, UK</p>
+    <p>&copy; 2025 Trattoria Luminosa | London</p>
   </footer>
 </body>
 </html>
