@@ -1,127 +1,37 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trattoria Luminosa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-title">
+    <h1>Trattoria Luminosa</h1>
+  </header>
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #fff9f2;
-  color: #333;
-  line-height: 1.6;
-  transition: background-color 0.3s ease;
-}
+  <nav class="navbar">
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-/* Header Section */
-.site-title {
-  background-color: #fff0e0;
-  text-align: center;
-  padding: 20px 0;
-  border-bottom: 2px solid #f98a3f;
-}
+  <section class="hero-text">
+    <p class="slogan">Bringing the Heart of Italy to Your Table</p>
+    <p class="visit-highlight">Visit us today for an unforgettable Italian experience!</p>
+  </section>
 
-.site-title h1 {
-  color: #b33c00;
-  font-size: 2.8em;
-  font-family: 'Georgia', serif;
-  letter-spacing: 1px;
-}
+  <main class="home-content">
+    <h2>Welcome to Trattoria Luminosa!</h2>
+    <p>Step into a warm and welcoming space where the flavors of Italy come alive. From handcrafted pasta to wood-fired pizzas, every dish is made with love and the finest ingredients.</p>
+    <p>Come dine with us and enjoy a taste of Italy right in your neighborhood.</p>
+  </main>
 
-/* Navbar */
-.navbar {
-  background-color: #ffcc99;
-  text-align: center;
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #5a2e0d;
-  font-weight: bold;
-  font-size: 1.1em;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #d64b00;
-  transform: scale(1.05);
-}
-
-.navbar .active {
-  border-bottom: 2px solid #b33c00;
-}
-
-/* Hero Section */
-.hero-text {
-  text-align: center;
-  background-color: #ffeedd;
-  padding: 30px 15px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.slogan {
-  font-size: 1.7em;
-  font-weight: 600;
-  color: #994d00;
-  margin-bottom: 10px;
-}
-
-.visit-highlight {
-  font-size: 1.3em;
-  color: #d64b00;
-  font-style: italic;
-}
-
-/* Main Content */
-main.home-content {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  animation: slideIn 0.8s ease-in-out;
-}
-
-main h2 {
-  color: #b33c00;
-  margin-bottom: 10px;
-  font-size: 1.8em;
-}
-
-main p, main ul {
-  margin-bottom: 20px;
-  font-size: 1.1em;
-}
-
-main ul li {
-  margin-left: 20px;
-  list-style-type: disc;
-}
-
-/* Footer */
-footer {
-  background-color: #fddbb0;
-  text-align: center;
-  padding: 15px;
-  color: #333;
-  font-size: 0.9em;
-  margin-top: 30px;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(-30px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
+  <footer>
+    <p>&copy; 2025 Trattoria Luminosa. All rights reserved.</p>
+  </footer>
+</body>
+</html>
