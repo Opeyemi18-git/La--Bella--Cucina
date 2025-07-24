@@ -1,138 +1,143 @@
-/* Reset */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
-/* Global Styles */
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #fff8f0;
+  background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Header */
 header {
-  background-color: #f44336;
+  background-color: #a94438;
   color: white;
-  padding: 30px 20px;
+  padding: 20px;
   text-align: center;
 }
 
 header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2.5em;
 }
 
-header p {
-  font-size: 1.2rem;
-  color: #ffddcc;
-}
-
-/* Navigation */
-nav {
-  background-color: #e53935;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #922c22;
   padding: 10px 0;
-  text-align: center;
 }
 
-nav a {
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
   color: white;
   text-decoration: none;
-  margin: 0 20px;
-  font-size: 1.1rem;
+  font-weight: bold;
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #ffe082;
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffd700;
 }
 
-/* Section (used for Hero/Welcome) */
-section {
-  text-align: center;
-  margin-top: 30px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
 }
 
-/* Welcome Message */
-.welcome {
-  padding: 40px 20px;
-  background-color: #ffe0b2;
-  color: #5d4037;
-  font-size: 1.3rem;
-  border-radius: 10px;
-  margin: 30px auto;
-  max-width: 800px;
-}
-
-/* Cards Grid Layout (used on homepage + menu) */
-.menu-grid {
+.reservation-form {
+  max-width: 600px;
+  margin: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px 20px;
-}
-
-.menu-item {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  padding: 20px;
   border-radius: 10px;
-  width: 300px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.menu-item:hover {
-  transform: scale(1.02);
-}
-
-.menu-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.menu-item h3 {
-  background-color: #f44336;
-  color: white;
+.reservation-form input,
+.reservation-form textarea,
+.reservation-form button {
   padding: 10px;
-  margin: 0;
-  font-size: 1.2rem;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.menu-item p {
-  padding: 15px;
-  font-size: 0.95rem;
-  color: #555;
+.reservation-form button {
+  background-color: #a94438;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Footer */
+.reservation-form button:hover {
+  background-color: #922c22;
+}
+
+.location {
+  margin-top: 40px;
+  text-align: center;
+}
+
+iframe {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 footer {
-  background-color: #f44336;
+  background-color: #a94438;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 15px 0;
   margin-top: 40px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .menu-grid {
-    flex-direction: column;
-    align-items: center;
-  }
+#cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  background-color: #eee;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  z-index: 999;
+}
 
-  .menu-item {
-    width: 90%;
-  }
+#cookie-banner button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#cookie-banner button:hover {
+  background-color: #222;
+}
+
+/* Menu Image Styling */
+.menu-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
