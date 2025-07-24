@@ -1,99 +1,64 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #fffaf0; /* Warm cream tone */
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
   color: #333;
-  line-height: 1.6;
-  padding: 20px;
 }
 
-/* Header */
 header {
-  background-color: #8B0000; /* Deep Italian red */
-  color: #fff;
+  background-color: #fff;
   padding: 20px;
   text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-nav {
-  margin-top: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
   margin: 0 15px;
-  font-weight: bold;
+  text-decoration: none;
+  color: #444;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #b30000;
 }
 
-/* Main Section */
 main {
-  max-width: 900px;
-  margin: 40px auto;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-h2 {
-  color: #8B0000;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
+.menu-section ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.menu-section {
+.menu-section li {
+  padding: 5px 0;
+  font-size: 18px;
+}
+
+.main-meals {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
-.menu-item {
-  margin-bottom: 20px;
-}
-
-.menu-item h3 {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.2rem;
-  color: #333;
-  border-bottom: 1px dashed #ccc;
-  padding-bottom: 5px;
-}
-
-.menu-item p {
-  margin-top: 5px;
-  font-style: italic;
-  color: #555;
-}
-
-/* Image styling for Main Meals only */
-.menu-image {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  margin: 15px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer */
-footer {
+.main-meals .meal {
+  flex: 1;
+  min-width: 250px;
   text-align: center;
-  margin-top: 50px;
-  color: #999;
-  font-size: 0.9rem;
+}
+
+.main-meals img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
 }
