@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About - Tasty Bites</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>La Bella Vita - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>About Us</h1>
+    <h1>La Bella Vita</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section>
-    <h2>Our Story</h2>
-    <p>Tasty Bites started as a humble eatery with a big dream—to serve delicious, hearty meals that bring people together. Today, we continue that mission with passion and dedication.</p>
-    <img src="images/about-chef.jpg" alt="Our Head Chef" class="about-image" />
-  </section>
+  <main class="home">
+    <section class="hero">
+      <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="Restaurant Front">
+      <div class="hero-text">
+        <h2>Welcome to La Bella Vita</h2>
+        <p>Experience authentic Italian cuisine in the heart of London.</p>
+      </div>
+    </section>
 
-  <section>
-    <h2>Meet the Team</h2>
-    <p>From chefs to wait staff, our team is passionate about creating unforgettable dining experiences.</p>
-    <img src="images/our-team.jpg" alt="Restaurant Team" class="about-image" />
-  </section>
+    <section class="highlight">
+      <img src="https://images.pexels.com/photos/1028423/pexels-photo-1028423.jpeg" alt="Pizza">
+      <p>Freshly prepared dishes using only the finest ingredients.</p>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 Tasty Bites. All rights reserved.
+    <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
   </footer>
+
+  <div class="cookie-banner" id="cookie-banner">
+    <p>We use cookies to ensure you get the best experience on our website. <button onclick="acceptCookies()">Accept</button></p>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      localStorage.setItem('cookiesAccepted', true);
+    }
+
+    window.onload = function () {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+    };
+  </script>
 </body>
 </html>
