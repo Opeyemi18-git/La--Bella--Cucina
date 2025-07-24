@@ -3,45 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>La Bella Vita - Menu</title>
+  <title>Menu | CozyBite Restaurant</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>La Bella Vita</h1>
+    <h1>CozyBite Restaurant Menu</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html" class="active">Menu</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <h2 class="menu-title">Our Delicious Menu</h2>
+  <main class="menu-container">
 
-    <!-- Desserts Section -->
     <section>
-      <h3>Desserts</h3>
+      <h2>Main Courses</h2>
+      <ul class="menu-list">
+        <li>
+          <img src="https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg" alt="Grilled Chicken">
+          <div class="menu-item-info">
+            <h4>Grilled Chicken - £8.50</h4>
+            <p>Succulent grilled chicken served with roasted vegetables and a choice of sauce.</p>
+          </div>
+        </li>
+        <li>
+          <img src="https://images.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg" alt="Veggie Pizza">
+          <div class="menu-item-info">
+            <h4>Veggie Pizza - £7.00</h4>
+            <p>Wood-fired pizza with bell peppers, onions, olives, and mozzarella.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Desserts</h2>
       <ul class="menu-list">
         <li>
           <img src="https://images.pexels.com/photos/754954/pexels-photo-754954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Tiramisu" />
           <div class="menu-item-info">
-            <h4>Tiramisu - Ksh 550</h4>
+            <h4>Tiramisu - £4.50</h4>
             <p>Classic Italian dessert with mascarpone cream, espresso-soaked ladyfingers, and a dusting of cocoa.</p>
           </div>
         </li>
-        <!-- You can continue adding more dessert items here using the same format -->
+        <li>
+          <img src="https://images.pexels.com/photos/302680/pexels-photo-302680.jpeg" alt="Chocolate Cake" />
+          <div class="menu-item-info">
+            <h4>Chocolate Cake - £3.80</h4>
+            <p>Rich and moist chocolate cake served with vanilla ice cream.</p>
+          </div>
+        </li>
       </ul>
     </section>
 
-    <!-- Add more categories below as needed -->
+    <section>
+      <h2>Beverages</h2>
+      <ul class="menu-list">
+        <li>
+          <img src="https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg" alt="Cappuccino" />
+          <div class="menu-item-info">
+            <h4>Cappuccino - £2.80</h4>
+            <p>Freshly brewed espresso topped with steamed milk and foam.</p>
+          </div>
+        </li>
+        <li>
+          <img src="https://images.pexels.com/photos/594699/pexels-photo-594699.jpeg" alt="Orange Juice" />
+          <div class="menu-item-info">
+            <h4>Orange Juice - £2.20</h4>
+            <p>Freshly squeezed orange juice served chilled.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
   </main>
 
   <footer>
-    <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
+    <p>&copy; 2025 CozyBite Restaurant. All rights reserved.</p>
   </footer>
 </body>
 </html>
