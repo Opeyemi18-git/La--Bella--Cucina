@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Trattoria Luminosa</title>
+  <title>La Bella Vita | Contact</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Trattoria Luminosa</h1>
+    <h1>La Bella Vita</h1>
     <nav>
-      <ul class="nav-links">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="menu.html">Menu</a></li>
@@ -19,50 +19,52 @@
     </nav>
   </header>
 
-  <main>
-    <section class="contact-section">
-      <h2>Contact Us</h2>
-      
-      <!-- Contact Form -->
-      <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+  <main class="contact-container">
+    <h2>Contact Us</h2>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+    <div class="contact-details">
+      <p><strong>Address:</strong> La Bella Vita, 123 Italian Street, London, UK</p>
+      <p><strong>Phone:</strong> +44 20 7946 0123</p>
+      <p><strong>Email:</strong> info@labellavita.co.uk</p>
+      <p><strong>Opening Hours:</strong> Mon–Sun: 12:00 PM – 11:00 PM</p>
+    </div>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=London&output=embed"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
 
-        <button type="submit">Send Message</button>
-      </form>
+    <h3>Make a Reservation</h3>
+    <form class="reservation-form" action="#" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
 
-      <!-- Contact Info -->
-      <div class="contact-info">
-        <h3>Visit or Reach Us</h3>
-        <p><strong>Phone:</strong> +44 20 7946 0123</p>
-        <p><strong>Address:</strong> 25 Piccadilly, London W1J 0DG, United Kingdom</p>
-        <p><strong>Email:</strong> info@trattorialuminosa.co.uk</p>
-      </div>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
 
-      <!-- Map -->
-      <div class="map-container">
-        <h3>Our Location</h3>
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9935.261946643187!2d-0.14383209999999998!3d51.5109655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604d37b52b13b%3A0xf9af52995f202f6!2sPiccadilly%2C%20London%20W1J%200DG%2C%20UK!5e0!3m2!1sen!2suk!4v1721778888888" 
-          width="100%" 
-          height="350" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </section>
+      <label for="date">Reservation Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Reservation Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" name="guests" min="1" max="20" required>
+
+      <button type="submit">Book Now</button>
+    </form>
   </main>
 
   <footer>
-    <p>&copy; 2025 Trattoria Luminosa | London, UK</p>
+    <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
   </footer>
+
+  <script src="cookies.js"></script>
 </body>
 </html>
