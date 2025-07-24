@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | Trattoria Luminosa</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Trattoria Luminosa</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
     <h1>About Trattoria Luminosa</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section>
+    <section class="about-section animate">
       <h2>Our Story</h2>
-      <p>Founded in London with a passion for the Mediterranean, we bring southern Italy's charm to your plate.</p>
-    </section>
-    <section>
-      <h2>Our Mission</h2>
-      <p>To deliver vibrant, fresh Italian food in a cozy, welcoming setting.</p>
-    </section>
-    <section>
-      <h2>Why "Luminosa"?</h2>
-      <p>“Luminosa” means radiant in Italian — a reflection of our food, atmosphere, and hospitality.</p>
+      <p>Founded in the heart of London, Trattoria Luminosa is a family-run Italian restaurant dedicated to bringing the taste of traditional Italy to the UK. Our chefs blend timeless recipes with local ingredients to craft truly unforgettable meals.</p>
+      <p>Whether you're joining us for a romantic dinner or a family gathering, we promise a warm atmosphere and dishes that feel like home.</p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Trattoria Luminosa | London, UK</p>
   </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>This site uses cookies to improve your experience. By continuing to browse, you accept our cookie policy.</p>
+    <button onclick="acceptCookies()">Accept</button>
+  </div>
 </body>
 </html>
