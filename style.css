@@ -1,7 +1,6 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+/* Import fonts (if not using <link> in HTML head) */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap'); */
 
-/* Reset some defaults */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,6 @@ body {
   background-color: #fefcf7;
   color: #333;
   line-height: 1.6;
-  padding: 0 20px;
 }
 
 header {
@@ -35,7 +33,7 @@ nav {
 }
 
 nav a {
-  margin: 0 15px;
+  margin: 0 12px;
   text-decoration: none;
   color: #a6442e;
   font-weight: 600;
@@ -47,47 +45,64 @@ nav a:hover {
 }
 
 main {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 40px auto;
-  padding: 20px;
+  padding: 0 20px;
+}
+
+/* Menu Section */
+.menu-container {
   background-color: #ffffff;
+  padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
 }
 
-section {
-  margin-bottom: 30px;
-}
-
-section h2 {
+.menu-container h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
   color: #a6442e;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-section p {
-  font-size: 1.05rem;
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: #fffaf3;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.menu-item h3 {
+  font-size: 1.2rem;
+  color: #a6442e;
+  margin-bottom: 8px;
+}
+
+.menu-item p {
+  font-size: 1rem;
   color: #555;
 }
 
-footer {
-  text-align: center;
-  margin-top: 50px;
-  padding: 20px 0;
-  background-color: #fff3e6;
-  border-top: 2px solid #f2c29c;
-  font-size: 0.9rem;
-  color: #666;
+.price {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #333;
 }
+
 /* Gallery Section */
 .gallery {
-  margin: 40px auto;
-  max-width: 1000px;
-  padding: 20px;
-  background-color: #fffaf3;
+  padding: 30px;
+  background-color: #fff3e6;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .gallery h2 {
@@ -100,8 +115,8 @@ footer {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
 }
 
 .gallery-grid img {
@@ -115,4 +130,15 @@ footer {
 
 .gallery-grid img:hover {
   transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: #fff3e6;
+  border-top: 2px solid #f2c29c;
+  font-size: 0.9rem;
+  color: #666;
 }
