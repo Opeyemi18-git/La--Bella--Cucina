@@ -2,14 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | Trattoria Luminosa</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trattoria Luminosa - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scripts.js" defer></script>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf0;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #c62828;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      animation: slideDown 1s ease-out forwards;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd54f;
+    }
+
+    .banner {
+      background: url('banner.jpg') no-repeat center center/cover;
+      height: 400px;
+      position: relative;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .banner-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      font-size: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      text-align: center;
+      animation: fadeUp 1s ease-in;
+    }
+
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Trattoria Luminosa</h1>
+    <h1>Welcome to Trattoria Luminosa</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
@@ -18,17 +98,19 @@
     </nav>
   </header>
 
-  <main>
-    <section class="welcome">
-      <h2>Welcome to Trattoria Luminosa</h2>
-      <p>Experience the warmth of Southern Italy in the heart of London. Our food is fresh, authentic, and made with love.</p>
-    </section>
-  </main>
+  <section class="banner">
+    <div class="banner-text">
+      Authentic Italian Cuisine in the Heart of London
+    </div>
+  </section>
+
+  <section class="intro">
+    <h2>Experience Italy with Every Bite</h2>
+    <p>At Trattoria Luminosa, we bring the charm of a Roman trattoria to London. Enjoy freshly made pasta, artisan pizza, and fine wines in a cozy setting.</p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Trattoria Luminosa | London, UK</p>
+    &copy; 2025 Trattoria Luminosa | London, UK
   </footer>
-
-  <script src="cookie.js"></script>
 </body>
 </html>
