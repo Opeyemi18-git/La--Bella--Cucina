@@ -1,79 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Menu | Trattoria Luminosa</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1 class="fade-in">Trattoria Luminosa</h1>
+    <h1>Trattoria Luminosa</h1>
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html" class="active">Menu</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a class="active" href="menu.html">Menu</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="fade-in">
+  <main class="menu-main">
     <h2>Our Menu</h2>
-    <section class="menu">
-      <article>
+
+    <div class="menu-item">
+      <img src="https://images.pexels.com/photos/5638471/pexels-photo-5638471.jpeg" alt="Bruschetta">
+      <div class="menu-description">
         <h3>Bruschetta</h3>
-        <p>Grilled bread rubbed with garlic and topped with tomatoes, olive oil, and basil.</p>
-        <img src="https://images.pexels.com/photos/15735983/pexels-photo-15735983.jpeg" alt="Caprese salad on a plate" width="5">
-        <p class="price">£5.50</p>
-      </article>
+        <p>Grilled bread topped with fresh tomatoes, garlic, basil, and olive oil. A perfect starter.</p>
+      </div>
+    </div>
 
-      <article>
+    <div class="menu-item">
+      <img src="https://images.pexels.com/photos/15735983/pexels-photo-15735983.jpeg" alt="Caprese Salad">
+      <div class="menu-description">
         <h3>Caprese Salad</h3>
-        <p>Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze.</p>
-        <p class="price">£7.00</p>
-      </article>
+        <p>Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze. A light and refreshing appetizer.</p>
+      </div>
+    </div>
 
-      <article>
+    <div class="menu-item">
+      <img src="https://images.pexels.com/photos/10068752/pexels-photo-10068752.jpeg" alt="Margherita Pizza">
+      <div class="menu-description">
         <h3>Margherita Pizza</h3>
-        <p>Classic pizza with tomato sauce, fresh mozzarella, and basil.</p>
-        <p class="price">£9.95</p>
-      </article>
+        <p>Wood-fired pizza topped with tomato sauce, fresh mozzarella, and basil leaves.</p>
+      </div>
+    </div>
 
-      <article>
+    <div class="menu-item">
+      <img src="https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg" alt="Spaghetti Carbonara">
+      <div class="menu-description">
         <h3>Spaghetti Carbonara</h3>
-        <p>Traditional Roman pasta with pancetta, egg, and pecorino cheese.</p>
-        <p class="price">£11.50</p>
-      </article>
+        <p>Classic Roman pasta with pancetta, egg, Parmesan, and black pepper. Creamy and comforting.</p>
+      </div>
+    </div>
 
-      <article>
+    <div class="menu-item">
+      <img src="https://images.pexels.com/photos/18955555/pexels-photo-18955555.jpeg" alt="Tiramisu">
+      <div class="menu-description">
         <h3>Tiramisu</h3>
-        <p>Classic Italian dessert made with coffee-soaked ladyfingers and mascarpone cream.</p>
-        <p class="price">£5.00</p>
-      </article>
-    </section>
+        <p>A beloved Italian dessert with coffee-soaked ladyfingers, mascarpone cream, and cocoa dust.</p>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Trattoria Luminosa, London, UK. All rights reserved.</p>
+    <p>&copy; 2025 Trattoria Luminosa. All rights reserved.</p>
   </footer>
 
+  <div class="cookie-banner" id="cookieBanner">
+    <p>We use cookies to improve your experience. By using our site, you agree to our cookie policy.</p>
+    <button onclick="acceptCookies()">Got it!</button>
+  </div>
+
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.fade-in').forEach(el => {
-        el.style.opacity = 0;
-        el.style.transform = 'translateY(20px)';
-        setTimeout(() => {
-          el.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-          el.style.opacity = 1;
-          el.style.transform = 'translateY(0)';
-        }, 200);
-      });
-    });
+    function acceptCookies() {
+      document.getElementById("cookieBanner").style.display = "none";
+      document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365;
+    }
+
+    window.onload = () => {
+      if (!document.cookie.includes("cookiesAccepted=true")) {
+        document.getElementById("cookieBanner").style.display = "flex";
+      }
+    };
   </script>
 </body>
 </html>
