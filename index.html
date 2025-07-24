@@ -1,116 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trattoria Luminosa - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="scripts.js" defer></script>
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fffaf0;
-      color: #333;
-      overflow-x: hidden;
-    }
-
-    header {
-      background-color: #c62828;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-      animation: slideDown 1s ease-out forwards;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #ffd54f;
-    }
-
-    .banner {
-      background: url('banner.jpg') no-repeat center center/cover;
-      height: 400px;
-      position: relative;
-      animation: fadeIn 2s ease-in;
-    }
-
-    .banner-text {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: white;
-      font-size: 2rem;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 1rem;
-      border-radius: 10px;
-    }
-
-    .intro {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-      text-align: center;
-      animation: fadeUp 1s ease-in;
-    }
-
-    footer {
-      background-color: #eee;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-100%); }
-      to { transform: translateY(0); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trattoria Luminosa | Welcome</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <h1>Welcome to Trattoria Luminosa</h1>
+  <header class="header">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <div class="logo">Trattoria Luminosa</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="banner">
-    <div class="banner-text">
-      Authentic Italian Cuisine in the Heart of London
+  <section class="hero">
+    <div class="hero-text animate-slide">
+      <h1>Welcome to Trattoria Luminosa</h1>
+      <p>Authentic Italian Cuisine in the Heart of London</p>
+      <a href="menu.html" class="btn">Explore Our Menu</a>
+    </div>
+    <div class="hero-image animate-fade">
+      <img src="images/restaurant-interior.jpg" alt="Italian Restaurant Interior">
     </div>
   </section>
 
-  <section class="intro">
-    <h2>Experience Italy with Every Bite</h2>
-    <p>At Trattoria Luminosa, we bring the charm of a Roman trattoria to London. Enjoy freshly made pasta, artisan pizza, and fine wines in a cozy setting.</p>
+  <section class="features animate-up">
+    <div class="feature">
+      <img src="images/pasta.jpg" alt="Delicious Pasta">
+      <h3>Fresh Ingredients</h3>
+      <p>We source the freshest local and imported ingredients daily.</p>
+    </div>
+    <div class="feature">
+      <img src="images/wine.jpg" alt="Fine Wine">
+      <h3>Exquisite Wine</h3>
+      <p>Enjoy hand-picked wines that perfectly pair with your meal.</p>
+    </div>
+    <div class="feature">
+      <img src="images/ambience.jpg" alt="Cozy Ambience">
+      <h3>Inviting Ambience</h3>
+      <p>Relax in our warm and rustic setting with family and friends.</p>
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Trattoria Luminosa | London, UK
+    <p>&copy; 2025 Trattoria Luminosa | London, UK</p>
   </footer>
+
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By continuing, you agree to our cookie policy.</p>
+    <button id="accept-cookies">Accept</button>
+  </div>
 </body>
+
 </html>
