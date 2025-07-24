@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
-    <nav class="navbar">
-      <div class="logo">La Bella Vita</div>
-      <ul class="nav-links">
+    <h1>La Bella Vita</h1>
+    <nav>
+      <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="about.html">About</a></li>
@@ -19,21 +20,25 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg" alt="Dining Ambience" class="hero-img"/>
-    <div class="hero-text animate-fade">
-      <h1>Welcome to La Bella Vita</h1>
-      <p>Experience Authentic Italian Cuisine in the Heart of London</p>
-    </div>
-  </section>
+  <main class="home">
+    <section class="hero">
+      <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg" alt="Dining Table" />
+      <div class="hero-text">
+        <h2>Welcome to La Bella Vita</h2>
+        <p>A Taste of Italy in the Heart of London</p>
+      </div>
+    </section>
 
-  <section class="intro-section animate-slide">
-    <div class="content">
-      <h2>Fresh. Traditional. Unforgettable.</h2>
-      <p>Our chefs craft exquisite meals from fresh ingredients daily. Come for the pasta, stay for the memories.</p>
-    </div>
-    <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="Restaurant Front" class="intro-img"/>
-  </section>
+    <section class="intro">
+      <h2>Discover Authentic Italian Cuisine</h2>
+      <p>Enjoy our freshly made pasta, stone-baked pizzas, and fine wines in a warm and cozy atmosphere.</p>
+    </section>
+
+    <section class="feature-images">
+      <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="Trattoria Storefront" />
+      <img src="https://images.pexels.com/photos/18252321/pexels-photo-18252321.jpeg" alt="Interior Dining" />
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
@@ -41,20 +46,22 @@
 
   <!-- Cookie Consent -->
   <div class="cookie-banner" id="cookie-banner">
-    <p>This website uses cookies to ensure you get the best experience. <a href="#">Learn more</a></p>
-    <button id="accept-cookies">Accept</button>
+    <p>This website uses cookies to ensure you get the best experience on our website. <a href="#">Learn more</a></p>
+    <button onclick="acceptCookies()">Accept</button>
   </div>
 
   <script>
-    const banner = document.getElementById('cookie-banner');
-    const acceptBtn = document.getElementById('accept-cookies');
-    if (!localStorage.getItem('cookiesAccepted')) {
-      banner.style.display = 'flex';
+    function acceptCookies() {
+      document.getElementById("cookie-banner").style.display = "none";
+      localStorage.setItem("cookiesAccepted", "true");
     }
-    acceptBtn.addEventListener('click', () => {
-      localStorage.setItem('cookiesAccepted', 'yes');
-      banner.style.display = 'none';
-    });
+
+    window.onload = function () {
+      if (!localStorage.getItem("cookiesAccepted")) {
+        document.getElementById("cookie-banner").style.display = "flex";
+      }
+    };
   </script>
+
 </body>
 </html>
