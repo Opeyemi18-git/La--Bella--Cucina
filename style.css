@@ -1,144 +1,127 @@
-/* Updated style.css for Trattoria Luminosa */
-
-/* Global Styles */
-body {
+/* General Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #fffdf2;
+  background-color: #fff9f2;
   color: #333;
   line-height: 1.6;
+  transition: background-color 0.3s ease;
 }
 
-header {
-  background-color: #ffcc70;
-  padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Header Section */
+.site-title {
+  background-color: #fff0e0;
   text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  padding: 20px 0;
+  border-bottom: 2px solid #f98a3f;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.2rem;
-  color: #6c4b00;
+.site-title h1 {
+  color: #b33c00;
+  font-size: 2.8em;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
 }
 
-/* Navigation Styles */
-nav ul {
+/* Navbar */
+.navbar {
+  background-color: #ffcc99;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding: 0;
-  margin: 10px 0 0 0;
-  background-color: #fbd085;
+  gap: 40px;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
+.navbar a {
   text-decoration: none;
-  color: #333;
+  color: #5a2e0d;
   font-weight: bold;
-  font-size: 1.1rem;
-  padding: 8px 12px;
-  transition: background-color 0.3s ease;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li a:hover {
-  background-color: #ffeaa7;
-  border-radius: 5px;
+.navbar a:hover {
+  color: #d64b00;
+  transform: scale(1.05);
 }
 
-/* Section Layouts */
-section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
+.navbar .active {
+  border-bottom: 2px solid #b33c00;
 }
 
-h2 {
-  font-size: 2rem;
-  color: #b86b00;
-  margin-bottom: 20px;
+/* Hero Section */
+.hero-text {
   text-align: center;
+  background-color: #ffeedd;
+  padding: 30px 15px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Contact Form */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: #fff4d2;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.slogan {
+  font-size: 1.7em;
+  font-weight: 600;
+  color: #994d00;
+  margin-bottom: 10px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  width: 100%;
+.visit-highlight {
+  font-size: 1.3em;
+  color: #d64b00;
+  font-style: italic;
 }
 
-.contact-form button {
-  padding: 10px 20px;
-  background-color: #ff9900;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+/* Main Content */
+main.home-content {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  animation: slideIn 0.8s ease-in-out;
 }
 
-.contact-form button:hover {
-  background-color: #cc7a00;
+main h2 {
+  color: #b33c00;
+  margin-bottom: 10px;
+  font-size: 1.8em;
 }
 
-/* Map Section */
-.map {
-  margin-top: 30px;
-  border: 2px solid #ffd166;
-  border-radius: 10px;
-  overflow: hidden;
+main p, main ul {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+main ul li {
+  margin-left: 20px;
+  list-style-type: disc;
 }
 
 /* Footer */
 footer {
-  background-color: #fbd085;
+  background-color: #fddbb0;
   text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
+  padding: 15px;
+  color: #333;
+  font-size: 0.9em;
+  margin-top: 30px;
 }
 
 /* Animations */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
