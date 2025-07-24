@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>La Bella Vita</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>La Bella Vita - Home</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
 </head>
 <body>
   <header>
-    <h1>La Bella Vita</h1>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <div class="logo">La Bella Vita</div>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="about.html">About</a></li>
@@ -19,32 +20,46 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Welcome to La Bella Vita</h2>
-      <p>Experience the taste of Italy in the heart of London.</p>
-    </section>
-  </main>
+  <section class="hero fade-in">
+    <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg" alt="Dining Table" class="hero-img"/>
+    <div class="hero-text">
+      <h1>Welcome to La Bella Vita</h1>
+      <p>Authentic Italian Cuisine in the Heart of London</p>
+    </div>
+  </section>
 
-  <!-- Cookie Consent Banner -->
-  <div id="cookie-banner">
-    <p>
-      This website uses cookies to ensure you get the best experience on our website.
-      <button onclick="acceptCookies()">Accept</button>
-    </p>
+  <section class="intro fade-in">
+    <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="Restaurant Front"/>
+    <div>
+      <h2>Experience Italy in London</h2>
+      <p>At La Bella Vita, we serve traditional Italian dishes made with fresh, high-quality ingredients. Whether you're here for pizza, pasta, or a perfect Tiramisu, you'll feel right at home.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 La Bella Vita. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-banner" id="cookie-banner">
+    <p>This website uses cookies to enhance the user experience. <a href="#">Learn more</a></p>
+    <button id="accept-cookies">Got it!</button>
   </div>
 
   <script>
-    function acceptCookies() {
-      document.getElementById('cookie-banner').style.display = 'none';
-      localStorage.setItem('cookiesAccepted', 'true');
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+      const cookieBanner = document.getElementById("cookie-banner");
+      const acceptCookies = document.getElementById("accept-cookies");
 
-    window.onload = function () {
-      if (!localStorage.getItem('cookiesAccepted')) {
-        document.getElementById('cookie-banner').style.display = 'block';
+      if (!localStorage.getItem("cookiesAccepted")) {
+        cookieBanner.style.display = "block";
       }
-    };
+
+      acceptCookies.addEventListener("click", function () {
+        localStorage.setItem("cookiesAccepted", true);
+        cookieBanner.style.display = "none";
+      });
+    });
   </script>
 </body>
 </html>
