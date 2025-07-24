@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Bella Vita - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La Bella Vita</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">La Bella Vita</div>
+    <h1>La Bella Vita</h1>
     <nav>
-      <ul class="navbar">
-        <li><a href="index.html" class="active">Home</a></li>
+      <ul>
+        <li><a href="index.html">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -19,21 +19,32 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="La Bella Vita Restaurant Front" />
-    <div class="hero-text">
-      <h1>Welcome to La Bella Vita</h1>
-      <p>Authentic Italian cuisine in the heart of London</p>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <h2>Welcome to La Bella Vita</h2>
+      <p>Experience the taste of Italy in the heart of London.</p>
+    </section>
+  </main>
 
-  <section class="intro">
-    <h2>Experience True Italian Flavours</h2>
-    <p>At La Bella Vita, we bring the warmth and richness of Italy to your plate. Whether you're joining us for a romantic dinner, a family celebration, or a casual meal, you'll enjoy a cozy ambiance and delicious handmade dishes.</p>
-  </section>
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner">
+    <p>
+      This website uses cookies to ensure you get the best experience on our website.
+      <button onclick="acceptCookies()">Accept</button>
+    </p>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 La Bella Vita | London, UK</p>
-  </footer>
+  <script>
+    function acceptCookies() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      localStorage.setItem('cookiesAccepted', 'true');
+    }
+
+    window.onload = function () {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+    };
+  </script>
 </body>
 </html>
