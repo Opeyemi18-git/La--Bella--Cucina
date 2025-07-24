@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Tasty Bites</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Contact - La Bella Vita</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Contact Us</h1>
+    <h1>La Bella Vita</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="menu.html">Menu</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section>
-    <h2>Visit Us</h2>
-    <p>We’re located in the heart of the city. Come and dine with us!</p>
-    <iframe class="contact-map"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."
-      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
+  <main class="contact">
+    <h2>Contact & Reservations</h2>
+    <p>Email: contact@labellavita.co.uk</p>
+    <p>Phone: +44 20 7946 0123</p>
+    <p>Address: 123 Italian Street, London, UK</p>
 
-  <section>
-    <h2>Book a Table</h2>
+    <h3>Make a Reservation</h3>
     <form>
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message or Reservation Details"></textarea>
-      <button type="submit">Submit</button>
+      <label>Name:<input type="text" required></label>
+      <label>Email:<input type="email" required></label>
+      <label>Date:<input type="date" required></label>
+      <label>Time:<input type="time" required></label>
+      <label>Guests:<input type="number" min="1" required></label>
+      <button type="submit">Reserve</button>
     </form>
-  </section>
+
+    <div class="map">
+      <iframe src="https://maps.google.com/maps?q=london%20uk&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+    </div>
+  </main>
 
   <footer>
-    &copy; 2025 Tasty Bites. All rights reserved.
+    <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
   </footer>
 </body>
 </html>
