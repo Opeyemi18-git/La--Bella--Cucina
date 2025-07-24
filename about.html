@@ -2,40 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - La Bella Vita</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <div class="logo">La Bella Vita</div>
-    <nav>
-      <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>La Bella Vita</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="active"><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="about-us">
-    <div class="about-text">
-      <h1>About La Bella Vita</h1>
+  <main class="container fade-in">
+    <section class="about">
+      <h2>About Us</h2>
       <p>
-        Welcome to La Bella Vita, a cozy Italian restaurant nestled in the heart of London. Founded by a family passionate about food and culture, our mission is to bring you the most authentic taste of Italy using fresh, locally sourced ingredients and traditional recipes.
+        Welcome to La Bella Vita – your authentic Italian dining experience in the heart of London.
+        From handmade pasta to signature desserts, we bring you the finest flavors of Italy with love, tradition, and a warm smile.
       </p>
+
       <p>
-        Whether you are enjoying a quiet dinner or hosting a celebration, La Bella Vita offers the perfect atmosphere for every occasion.
+        Founded by a passionate culinary family, La Bella Vita is more than a restaurant – it’s a celebration of Italian heritage and hospitality.
+        Whether you’re enjoying a romantic evening or a family dinner, our dishes are made to bring people together.
       </p>
-    </div>
-    <div class="about-image">
-      <img src="https://images.pexels.com/photos/18252321/pexels-photo-18252321.jpeg" alt="La Bella Vita Interior" />
-    </div>
-  </section>
+
+      <div class="about-image">
+        <img src="https://images.pexels.com/photos/18252321/pexels-photo-18252321.jpeg" alt="La Bella Vita Restaurant" />
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 La Bella Vita | London, UK</p>
+    <div class="container">
+      <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
+    </div>
   </footer>
+
+  <!-- Optional: Cookie Consent Script -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>This website uses cookies to enhance the user experience. <button id="accept-cookies">Accept</button></p>
+  </div>
+  <script>
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptCookies = document.getElementById("accept-cookies");
+
+    if (!localStorage.getItem("cookiesAccepted")) {
+      cookieBanner.style.display = "block";
+    }
+
+    acceptCookies.onclick = () => {
+      localStorage.setItem("cookiesAccepted", true);
+      cookieBanner.style.display = "none";
+    };
+  </script>
 </body>
 </html>
