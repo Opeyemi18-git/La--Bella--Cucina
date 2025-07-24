@@ -1,17 +1,34 @@
-window.onload = function() {
-  if (!localStorage.getItem("cookiesAccepted")) {
-    let banner = document.createElement("div");
-    banner.innerHTML = `
-      <div style="position: fixed; bottom: 0; width: 100%; background: #eee; padding: 1em; text-align: center; z-index: 1000;">
-        We use cookies to improve your experience. 
-        <button onclick="acceptCookies()">Accept</button>
-      </div>
-    `;
-    document.body.appendChild(banner);
-  }
-};
+$(document).ready(function(){
+  $('#contactForm').on('submit', function(e){
+    e.preventDefault();
+    let valid = true;
+    $('#formError').text('');
 
-function acceptCookies() {
-  localStorage.setItem("cookiesAccepted", "true");
-  document.querySelector("div").remove();
-}
+    $('input, textarea').each(function(){
+      if (!this.checkValidity()) {
+        valid = false;
+        $(this).addClass('invalid');
+      } else {
+        $(this).removeClass('invalid');
+      }
+    });
+
+    if (!valid) {
+      $('#formError').text('Please correct the highlighted fields.');
+      return;
+    }
+
+    alert('Thank you for your message, ' + $('#name').val() + '!');
+    this.reset();
+  });
+
+  // Cookie banner
+  if (!localStorage.getItem('cookiesAccepted')) {
+    $('#cookieAccept').show().on('click', function(){
+      localStorage.setItem('cookiesAccepted', 'yes');
+      $(this).hide();
+    });
+  } else {
+    $('#cookieAccept').hide();
+  }
+});
