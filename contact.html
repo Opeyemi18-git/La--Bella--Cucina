@@ -2,125 +2,124 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Trattoria Luminosa</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
-      background-color: #f8f8f8;
-      color: #333;
+      background-color: #fffaf0;
       margin: 0;
       padding: 0;
-      animation: fadeIn 1s ease-in;
+      animation: fadeIn 1s ease-in-out;
     }
 
     @keyframes fadeIn {
       from {
         opacity: 0;
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
+        transform: translateY(0);
       }
     }
 
-    header, footer {
-      background-color: #262626;
+    header {
+      background-color: #b22222;
       color: white;
-      padding: 20px;
+      padding: 1rem;
       text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
     }
 
     h1 {
-      text-align: center;
-      margin-top: 30px;
+      margin: 0;
     }
 
-    .form-container {
-      max-width: 600px;
-      margin: 30px auto;
-      background-color: white;
-      padding: 30px;
+    main {
+      padding: 2rem;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 2rem;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 0 auto 3rem auto;
     }
 
-    label {
+    form label {
       display: block;
-      margin-top: 15px;
+      margin-top: 1rem;
     }
 
-    input, textarea {
+    form input,
+    form textarea {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 4px;
+      font-size: 1rem;
     }
 
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #a51d2d;
+    form button {
+      margin-top: 1rem;
+      background-color: #b22222;
       color: white;
       border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
       border-radius: 4px;
       cursor: pointer;
     }
 
-    .map {
-      text-align: center;
-      margin-top: 30px;
+    form button:hover {
+      background-color: #8b1a1a;
+    }
+
+    .map-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h2>Trattoria Luminosa</h2>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="menu.html">Menu</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <h1>Contact Us</h1>
   </header>
-
-  <h1>Contact Us</h1>
-
-  <div class="form-container">
-    <form action="#" method="POST">
+  <main>
+    <form>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" required />
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" required />
 
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit">Submit</button>
+      <button type="submit">Send</button>
     </form>
-  </div>
 
-  <div class="map">
-    <h2>Find Us in London</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19804.404202195895!2d-0.1346492!3d51.5098651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3339f3f3b3%3A0xaaa405bf4428cbf5!2sLondon%2C%20UK!5e0!3m2!1sen!2ske!4v1623074026003!5m2!1sen!2ske"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Trattoria Luminosa | Authentic Italian Cuisine in London</p>
-  </footer>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19800.47358100043!2d-0.1277588!3d51.5073506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3339ba27fd%3A0xe0ec6e3c0d38e3a6!2sLondon%2C%20UK!5e0!3m2!1sen!2ske!4v1620402175173!5m2!1sen!2ske"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </main>
 </body>
 
 </html>
