@@ -1,100 +1,87 @@
-/* Reset & Base */
+/* General Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #fefefe;
+  background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+/* Header and Navigation */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Header */
-header {
-  background-color: #8B0000;
-  color: white;
-  padding: 1.2rem 0;
-  text-align: center;
+header h1 {
+  font-size: 1.8rem;
 }
 
 nav ul {
-  display: flex;
-  justify-content: center;
   list-style: none;
-  padding: 0;
-  background-color: #A52A2A;
+  display: flex;
+  gap: 1rem;
 }
 
-nav ul li {
-  margin: 0 15px;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-nav ul li a {
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/hero.jpg') no-repeat center center/cover;
   color: white;
-  font-weight: bold;
-  padding: 10px;
-}
-
-nav ul li a:hover {
-  background-color: #7a1f1f;
-  border-radius: 4px;
-}
-
-/* Section Styles */
-section {
-  padding: 3rem 5%;
-}
-
-h2 {
+  padding: 100px 20px;
   text-align: center;
-  color: #8B0000;
-  margin-bottom: 2rem;
 }
 
-p {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 2rem;
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Image Styling */
-section img {
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* About Page Image Styling */
+.about-img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
   display: block;
-  margin: 20px auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  border-radius: 10px;
 }
 
-/* About Page */
-.about-content {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Menu Cards */
-.menu-grid {
+/* Menu Section */
+.menu {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  padding-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 2rem;
 }
 
 .menu-item {
-  background: #fffaf0;
+  background-color: #fff;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -103,113 +90,106 @@ section img {
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 10px;
 }
 
-/* Contact & Reservation */
-.contact-info {
-  text-align: center;
-  margin-bottom: 2rem;
+/* Contact Page */
+.contact-section {
+  padding: 2rem;
 }
 
-.reservation-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #fff8f4;
+.contact-section h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-section form {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.reservation-form label {
+.contact-section label {
   display: block;
-  margin: 10px 0 5px;
+  margin-top: 1rem;
 }
 
-.reservation-form input,
-.reservation-form textarea,
-.reservation-form select {
+.contact-section input,
+.contact-section textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 0.75rem;
+  margin-top: 0.3rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.reservation-form button {
-  background-color: #8B0000;
-  color: white;
+.contact-section button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #4CAF50;
+  color: #fff;
   border: none;
-  padding: 12px 20px;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 5px;
 }
 
-.reservation-form button:hover {
-  background-color: #A52A2A;
+.contact-section button:hover {
+  background-color: #45a049;
 }
 
-/* Footer */
+/* Footer (if needed) */
 footer {
-  text-align: center;
-  background: #8B0000;
-  color: white;
+  background-color: #222;
+  color: #fff;
   padding: 1rem;
-  margin-top: 3rem;
-}
-
-/* Google Map */
-.map-container {
   text-align: center;
-  margin-top: 2rem;
 }
 
-.map-container iframe {
-  width: 100%;
-  max-width: 700px;
-  height: 350px;
-  border: none;
-  border-radius: 10px;
-}
-
-/* Cookie Banner */
-.cookie-banner {
+/* Cookie Consent Styling */
+#cookie-banner {
+  display: none;
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #eee;
-  color: #333;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
   text-align: center;
   padding: 1rem;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 9999;
+  font-size: 0.9rem;
 }
 
-.cookie-banner button {
-  margin-left: 10px;
-  padding: 8px 15px;
-  background: #8B0000;
+#cookie-banner p {
+  margin: 0;
+}
+
+#cookie-banner button {
+  background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 4px;
+  padding: 8px 16px;
+  margin-left: 15px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.cookie-banner button:hover {
-  background: #A52A2A;
+#cookie-banner button:hover {
+  background-color: #45a049;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* Responsive Adjustments */
+@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .menu-item img {
-    height: 140px;
+  .hero h2 {
+    font-size: 2rem;
   }
 
-  .map-container iframe {
-    height: 250px;
+  .hero p {
+    font-size: 1rem;
   }
 }
