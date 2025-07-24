@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>La Bella Vita - Home</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
+  <title>La Bella Vita | Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="logo">La Bella Vita</div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -20,45 +19,41 @@
     </nav>
   </header>
 
-  <section class="hero fade-in">
-    <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg" alt="Dining Table" class="hero-img"/>
-    <div class="hero-text">
+  <section class="hero">
+    <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg" alt="Dining Ambience" class="hero-img"/>
+    <div class="hero-text animate-fade">
       <h1>Welcome to La Bella Vita</h1>
-      <p>Authentic Italian Cuisine in the Heart of London</p>
+      <p>Experience Authentic Italian Cuisine in the Heart of London</p>
     </div>
   </section>
 
-  <section class="intro fade-in">
-    <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="Restaurant Front"/>
-    <div>
-      <h2>Experience Italy in London</h2>
-      <p>At La Bella Vita, we serve traditional Italian dishes made with fresh, high-quality ingredients. Whether you're here for pizza, pasta, or a perfect Tiramisu, you'll feel right at home.</p>
+  <section class="intro-section animate-slide">
+    <div class="content">
+      <h2>Fresh. Traditional. Unforgettable.</h2>
+      <p>Our chefs craft exquisite meals from fresh ingredients daily. Come for the pasta, stay for the memories.</p>
     </div>
+    <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="Restaurant Front" class="intro-img"/>
   </section>
 
   <footer>
-    <p>&copy; 2025 La Bella Vita. All Rights Reserved.</p>
+    <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
   </footer>
 
   <!-- Cookie Consent -->
   <div class="cookie-banner" id="cookie-banner">
-    <p>This website uses cookies to enhance the user experience. <a href="#">Learn more</a></p>
-    <button id="accept-cookies">Got it!</button>
+    <p>This website uses cookies to ensure you get the best experience. <a href="#">Learn more</a></p>
+    <button id="accept-cookies">Accept</button>
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const cookieBanner = document.getElementById("cookie-banner");
-      const acceptCookies = document.getElementById("accept-cookies");
-
-      if (!localStorage.getItem("cookiesAccepted")) {
-        cookieBanner.style.display = "block";
-      }
-
-      acceptCookies.addEventListener("click", function () {
-        localStorage.setItem("cookiesAccepted", true);
-        cookieBanner.style.display = "none";
-      });
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    if (!localStorage.getItem('cookiesAccepted')) {
+      banner.style.display = 'flex';
+    }
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'yes');
+      banner.style.display = 'none';
     });
   </script>
 </body>
