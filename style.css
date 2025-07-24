@@ -1,4 +1,4 @@
-/* General Reset and Base Styles */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,12 +7,22 @@
 }
 
 body {
-  background-color: #f9f9f9;
+  background-color: #fdfdfd;
   color: #333;
   line-height: 1.6;
+  animation: fadeInBody 1.2s ease-in;
 }
 
-/* Header and Navigation */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Header */
 header {
   background-color: #222;
   color: #fff;
@@ -37,27 +47,71 @@ nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #f0c040;
 }
 
 /* Hero Section */
 .hero {
   background: url('images/hero.jpg') no-repeat center center/cover;
   color: white;
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
+  animation: fadeSlideIn 1.2s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 0.5rem;
 }
 
 .hero p {
   font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Menu Section */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 2rem;
+  animation: fadeInBody 1s ease;
+}
+
+.menu-item {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /* About Page Image Styling */
@@ -67,38 +121,12 @@ nav a:hover {
   display: block;
   margin: 2rem auto;
   border-radius: 10px;
+  animation: fadeInBody 1s ease;
 }
 
-/* Menu Section */
-.menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 2rem;
-}
-
-.menu-item {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.menu-item img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* Contact Page */
+/* Contact Section */
 .contact-section {
   padding: 2rem;
-}
-
-.contact-section h2 {
-  margin-bottom: 1rem;
 }
 
 .contact-section form {
@@ -106,7 +134,7 @@ nav a:hover {
   margin: auto;
   background: #fff;
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -121,7 +149,7 @@ nav a:hover {
   padding: 0.75rem;
   margin-top: 0.3rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .contact-section button {
@@ -132,13 +160,14 @@ nav a:hover {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contact-section button:hover {
-  background-color: #45a049;
+  background-color: #388e3c;
 }
 
-/* Footer (if needed) */
+/* Footer */
 footer {
   background-color: #222;
   color: #fff;
@@ -146,43 +175,43 @@ footer {
   text-align: center;
 }
 
-/* Cookie Consent Styling */
+/* Cookie Consent */
 #cookie-banner {
   display: none;
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.95);
   color: white;
   text-align: center;
   padding: 1rem;
   z-index: 9999;
   font-size: 0.9rem;
-}
-
-#cookie-banner p {
-  margin: 0;
+  animation: fadeInBody 1s ease;
 }
 
 #cookie-banner button {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #f0c040;
+  color: #000;
   border: none;
   padding: 8px 16px;
   margin-left: 15px;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 #cookie-banner button:hover {
-  background-color: #45a049;
+  background-color: #e2ae00;
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     gap: 0.5rem;
+    text-align: center;
   }
 
   .hero h2 {
