@@ -2,54 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | La Bella Vita</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Tasty Bites</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
+    <h1>Contact Us</h1>
     <nav>
-      <div class="logo">La Bella Vita</div>
-      <ul class="nav-links">
+      <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="contact">
-    <h1>Contact Us</h1>
-    <p>Have a question or want to book a table? Fill out the form below or reach us through the details provided.</p>
-    
-    <div class="contact-container">
-      <form class="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" placeholder="Your full name" required>
+  <section>
+    <h2>Visit Us</h2>
+    <p>We’re located in the heart of the city. Come and dine with us!</p>
+    <iframe class="contact-map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Your email address" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" rows="5" placeholder="Your message here..." required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-
-      <div class="contact-info">
-        <h3>Our Address</h3>
-        <p>123 Pasta Lane,<br>London, UK</p>
-        <h3>Phone</h3>
-        <p>+44 20 1234 5678</p>
-        <h3>Email</h3>
-        <p>info@labellavita.co.uk</p>
-      </div>
-    </div>
+  <section>
+    <h2>Book a Table</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message or Reservation Details"></textarea>
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
   <footer>
-    <p>© 2025 La Bella Vita. All rights reserved.</p>
+    &copy; 2025 Tasty Bites. All rights reserved.
   </footer>
 </body>
 </html>
