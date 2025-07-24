@@ -8,9 +8,9 @@
 </head>
 <body>
   <header>
-    <h1 class="restaurant-name">Trattoria Luminosa</h1>
+    <h1>Trattoria Luminosa</h1>
     <nav>
-      <ul class="nav-links">
+      <ul class="navbar">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="menu.html">Menu</a></li>
@@ -19,30 +19,36 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
+  <section class="hero">
+    <div class="hero-text">
       <h2>Welcome to Trattoria Luminosa</h2>
-      <p class="slogan">Authentic Italian cuisine in the heart of London.</p>
-      <p class="cta">Visit us today and taste the tradition!</p>
-    </section>
-  </main>
+      <p>Experience the heart of Italy in every bite.</p>
+      <a href="menu.html" class="cta-button">Visit Us Today</a>
+    </div>
+    <div class="hero-images">
+      <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg" alt="People dining at an Italian restaurant" />
+      <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="Outside view of Trattoria" />
+    </div>
+  </section>
 
-  <!-- Cookie Banner -->
-  <div class="cookie-banner" id="cookieBanner">
-    We use cookies to improve your experience. By using our site, you agree to our use of cookies.
-    <button onclick="acceptCookies()">Accept</button>
+  <footer>
+    <p>&copy; 2025 Trattoria Luminosa | London, UK</p>
+  </footer>
+
+  <!-- Cookie Consent -->
+  <div id="cookie-banner">
+    <p>This website uses cookies to ensure you get the best experience. <button onclick="acceptCookies()">Got it!</button></p>
   </div>
 
   <script>
     function acceptCookies() {
-      localStorage.setItem("cookiesAccepted", "true");
-      document.getElementById("cookieBanner").style.display = "none";
+      document.getElementById("cookie-banner").style.display = "none";
+      document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 30;
     }
 
     window.onload = function () {
-      const accepted = localStorage.getItem("cookiesAccepted");
-      if (!accepted) {
-        document.getElementById("cookieBanner").style.display = "block";
+      if (!document.cookie.includes("cookiesAccepted=true")) {
+        document.getElementById("cookie-banner").style.display = "block";
       }
     };
   </script>
