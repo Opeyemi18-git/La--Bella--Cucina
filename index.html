@@ -2,66 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>La Bella Vita | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Tasty Bites Restaurant</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <h1>La Bella Vita</h1>
+    <h1>Tasty Bites</h1>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="home">
-    <section class="hero">
-      <img src="https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg" alt="Dining Table" />
-      <div class="hero-text">
-        <h2>Welcome to La Bella Vita</h2>
-        <p>A Taste of Italy in the Heart of London</p>
-      </div>
-    </section>
+  <section>
+    <h2>Welcome to Tasty Bites!</h2>
+    <p>Discover the rich flavors of our handcrafted dishes, made with love and fresh local ingredients.</p>
+    <img src="images/restaurant-interior.jpg" alt="Cozy Restaurant Interior" />
+  </section>
 
-    <section class="intro">
-      <h2>Discover Authentic Italian Cuisine</h2>
-      <p>Enjoy our freshly made pasta, stone-baked pizzas, and fine wines in a warm and cozy atmosphere.</p>
-    </section>
-
-    <section class="feature-images">
-      <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="Trattoria Storefront" />
-      <img src="https://images.pexels.com/photos/18252321/pexels-photo-18252321.jpeg" alt="Interior Dining" />
-    </section>
-  </main>
+  <section>
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li> Fresh Ingredients</li>
+      <li> Friendly Staff</li>
+      <li> Fast Service</li>
+      <li> Cozy Atmosphere</li>
+    </ul>
+    <img src="images/happy-customers.jpg" alt="Happy Customers" />
+  </section>
 
   <footer>
-    <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
+    &copy; 2025 Tasty Bites. All rights reserved.
   </footer>
-
-  <!-- Cookie Consent -->
-  <div class="cookie-banner" id="cookie-banner">
-    <p>This website uses cookies to ensure you get the best experience on our website. <a href="#">Learn more</a></p>
-    <button onclick="acceptCookies()">Accept</button>
-  </div>
-
-  <script>
-    function acceptCookies() {
-      document.getElementById("cookie-banner").style.display = "none";
-      localStorage.setItem("cookiesAccepted", "true");
-    }
-
-    window.onload = function () {
-      if (!localStorage.getItem("cookiesAccepted")) {
-        document.getElementById("cookie-banner").style.display = "flex";
-      }
-    };
-  </script>
-
 </body>
 </html>
