@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Contact | Trattoria Luminosa</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -13,7 +14,7 @@
       <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
   </header>
 
@@ -21,21 +22,37 @@
     <section>
       <h2>Visit Us</h2>
       <p>123 Pasta Lane, London, UK</p>
-      <iframe
-        src="https://www.google.com/maps?q=123+Pasta+Lane,+London,+UK&output=embed"
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
+      <iframe src="https://www.google.com/maps?q=123+Pasta+Lane,+London,+UK&output=embed"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <section>
-      <h2>Contact</h2>
-      <p>Email: info@trattorialuminosa.co.uk</p>
-      <p>Phone: +44 20 1234 5678</p>
+      <h2>Contact Form</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" required minlength="2">
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone*</label>
+        <input type="tel" id="phone" name="phone" required pattern="\\+?\\d{7,15}">
+
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" required minlength="10"></textarea>
+
+        <button type="submit">Send Message</button>
+        <div id="formError" role="alert" aria-live="assertive"></div>
+      </form>
     </section>
   </main>
 
   <footer>
+    <button id="cookieAccept">Accept Cookies</button>
     <p>&copy; 2025 Trattoria Luminosa | London, UK</p>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
