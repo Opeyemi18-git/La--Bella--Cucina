@@ -1,144 +1,88 @@
-/* Import fonts (if not using <link> in HTML head) */
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap'); */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Importing Open Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #fefcf7;
+  margin: 0;
+  padding: 0;
+  background-color: #fffaf0; /* warm cream background */
   color: #333;
-  line-height: 1.6;
 }
 
 header {
-  background-color: #fff3e6;
-  padding: 20px 0;
+  background-color: #8b0000; /* deep Italian red */
+  color: white;
+  padding: 20px;
   text-align: center;
-  border-bottom: 2px solid #f2c29c;
-}
-
-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #a6442e;
-  margin-bottom: 10px;
-}
-
-nav {
-  margin-top: 10px;
 }
 
 nav a {
-  margin: 0 12px;
+  color: white;
+  margin: 0 15px;
   text-decoration: none;
-  color: #a6442e;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 nav a:hover {
-  color: #d9644a;
   text-decoration: underline;
 }
 
 main {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* Menu Section */
-.menu-container {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+h1, h2 {
+  color: #8b0000;
+}
+
+section {
   margin-bottom: 40px;
 }
 
-.menu-container h2 {
-  font-family: 'Playfair Display', serif;
-  color: #a6442e;
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+.menu-section h2 {
+  border-bottom: 2px solid #8b0000;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .menu-item {
-  background-color: #fffaf3;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #eee;
-}
-
-.menu-item h3 {
-  font-size: 1.2rem;
-  color: #a6442e;
-  margin-bottom: 8px;
-}
-
-.menu-item p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.price {
-  display: inline-block;
-  margin-top: 8px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Gallery Section */
-.gallery {
-  padding: 30px;
-  background-color: #fff3e6;
-  border-radius: 12px;
-}
-
-.gallery h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: #a6442e;
-  text-align: center;
   margin-bottom: 20px;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+.menu-item h3 {
+  margin-bottom: 5px;
 }
 
-.gallery-grid img {
+.menu-item p {
+  margin-top: 0;
+}
+
+.menu-image {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.03);
+/* Responsive for mobile */
+@media screen and (max-width: 600px) {
+  .menu-image {
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
-/* Footer */
 footer {
+  background-color: #8b0000;
+  color: white;
   text-align: center;
-  margin-top: 40px;
-  padding: 20px 0;
-  background-color: #fff3e6;
-  border-top: 2px solid #f2c29c;
-  font-size: 0.9rem;
-  color: #666;
+  padding: 20px;
 }
