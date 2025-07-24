@@ -3,62 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>La Bella Vita | Menu</title>
+  <title>Menu | La Bella Vita</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>La Bella Vita</h1>
     <nav>
-      <ul>
+      <div class="logo">La Bella Vita</div>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="menu-container">
-    <h2>Our Menu</h2>
-    
-    <section class="menu-grid">
-      <div class="menu-item">
-        <img src="https://images.pexels.com/photos/5638471/pexels-photo-5638471.jpeg" alt="Bruschetta">
-        <h3>Bruschetta</h3>
-        <p>Toasted bread topped with fresh tomatoes, garlic, basil, and olive oil. A classic Italian starter.</p>
-      </div>
-
-      <div class="menu-item">
-        <img src="https://images.pexels.com/photos/15735983/pexels-photo-15735983.jpeg" alt="Caprese Salad">
-        <h3>Caprese Salad</h3>
-        <p>Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze and olive oil.</p>
-      </div>
-
-      <div class="menu-item">
-        <img src="https://images.pexels.com/photos/10068752/pexels-photo-10068752.jpeg" alt="Margherita Pizza">
-        <h3>Margherita Pizza</h3>
-        <p>Wood-fired pizza topped with tomato sauce, mozzarella, and fresh basil leaves.</p>
-      </div>
-
-      <div class="menu-item">
-        <img src="https://images.pexels.com/photos/4518844/pexels-photo-4518844.jpeg" alt="Spaghetti Carbonara">
-        <h3>Spaghetti Carbonara</h3>
-        <p>Spaghetti tossed with pancetta, eggs, Pecorino Romano, and black pepper.</p>
-      </div>
-
-      <div class="menu-item">
-        <img src="https://images.pexels.com/photos/18955555/pexels-photo-18955555.jpeg" alt="Tiramisu">
-        <h3>Tiramisu</h3>
-        <p>A rich and creamy dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese.</p>
-      </div>
-    </section>
-  </main>
+  <section class="menu">
+    <h1>Our Menu</h1>
+    <img src="https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg" alt="Food items" class="responsive-img"/>
+    <ul class="menu-list">
+      <li>Margherita Pizza - £10</li>
+      <li>Lasagna Classica - £12</li>
+      <li>Spaghetti Carbonara - £11</li>
+      <li>Tiramisu - £6</li>
+    </ul>
+  </section>
 
   <footer>
-    <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
+    <p>© 2025 La Bella Vita. All rights reserved.</p>
   </footer>
-
-  <script src="cookies.js"></script>
 </body>
 </html>
