@@ -5,123 +5,181 @@
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #fff9f2;
+  background-color: #fff8f0;
   color: #333;
   line-height: 1.6;
-  transition: background-color 0.3s ease;
+  padding-bottom: 60px; /* space for cookie banner */
 }
 
-/* Header Section */
-.site-title {
-  background-color: #fff0e0;
+/* Header */
+header {
+  background-color: #ffcc80;
+  color: #4e342e;
+  padding: 20px;
   text-align: center;
-  padding: 20px 0;
-  border-bottom: 2px solid #f98a3f;
+  animation: fadeInDown 1s ease-in-out;
 }
 
-.site-title h1 {
-  color: #b33c00;
-  font-size: 2.8em;
-  font-family: 'Georgia', serif;
-  letter-spacing: 1px;
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-/* Navbar */
-.navbar {
-  background-color: #ffcc99;
-  text-align: center;
+header p {
+  font-size: 1.1rem;
+  color: #6d4c41;
+}
+
+/* Navigation */
+nav {
+  background-color: #ffe0b2;
   padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.navbar ul {
+nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
 }
 
-.navbar a {
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
   text-decoration: none;
-  color: #5a2e0d;
+  color: #5d4037;
   font-weight: bold;
-  font-size: 1.1em;
-  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
-.navbar a:hover {
-  color: #d64b00;
-  transform: scale(1.05);
-}
-
-.navbar .active {
-  border-bottom: 2px solid #b33c00;
-}
-
-/* Hero Section */
-.hero-text {
-  text-align: center;
-  background-color: #ffeedd;
-  padding: 30px 15px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.slogan {
-  font-size: 1.7em;
-  font-weight: 600;
-  color: #994d00;
-  margin-bottom: 10px;
-}
-
-.visit-highlight {
-  font-size: 1.3em;
-  color: #d64b00;
-  font-style: italic;
+nav ul li a:hover {
+  color: #d84315;
 }
 
 /* Main Content */
-main.home-content {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  animation: slideIn 0.8s ease-in-out;
-}
-
-main h2 {
-  color: #b33c00;
-  margin-bottom: 10px;
-  font-size: 1.8em;
-}
-
-main p, main ul {
-  margin-bottom: 20px;
-  font-size: 1.1em;
-}
-
-main ul li {
-  margin-left: 20px;
-  list-style-type: disc;
+main {
+  padding: 30px;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 /* Footer */
 footer {
-  background-color: #fddbb0;
+  background-color: #ffe0b2;
   text-align: center;
   padding: 15px;
-  color: #333;
-  font-size: 0.9em;
-  margin-top: 30px;
+  color: #5d4037;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+/* Contact Page */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-form {
+  background-color: #fff3e0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #ff7043;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: #e64a19;
+}
+
+/* Map */
+.contact-map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* Cookie Banner */
+.cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffe082;
+  color: #4e342e;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.cookie-banner button {
+  background-color: #fb8c00;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cookie-banner button:hover {
+  background-color: #e65100;
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(-30px); }
-  to   { opacity: 1; transform: translateX(0); }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
