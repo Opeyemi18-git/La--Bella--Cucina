@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>La Bella Vita - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
   <header>
     <h1>La Bella Vita</h1>
     <nav>
       <ul>
-        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="menu.html">Menu</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -18,50 +20,26 @@
     </nav>
   </header>
 
-  <main class="home">
-    <!-- Hero Section -->
-    <section class="hero fade-in">
-      <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="Restaurant Front" class="animated-img">
-      <div class="hero-text">
-        <h2>Welcome to La Bella Vita</h2>
-        <p>Experience authentic Italian cuisine in the heart of London.</p>
-      </div>
+  <main class="home-main">
+    <section class="intro">
+      <h2>Welcome to La Bella Vita</h2>
+      <p>
+        Experience the heart of Italy right here in London. At La Bella Vita, we serve authentic Italian dishes made with love, 
+        tradition, and the finest ingredients. Come enjoy a beautiful life with us!
+      </p>
     </section>
 
-    <!-- Highlight Section -->
-    <section class="highlight fade-in">
-      <img src="https://images.pexels.com/photos/1028423/pexels-photo-1028423.jpeg" alt="Pizza" class="animated-img">
-      <p>Freshly prepared dishes using only the finest ingredients.</p>
+    <section class="home-image">
+      <img 
+        src="https://images.pexels.com/photos/6646764/pexels-photo-6646764.jpeg" 
+        alt="Italian Cuisine"
+        class="home-banner"
+      />
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
+    <p>&copy; 2025 La Bella Vita | All rights reserved.</p>
   </footer>
-
-  <!-- Cookie Banner -->
-  <div class="cookie-banner" id="cookie-banner">
-    <p>
-      We use cookies to ensure you get the best experience on our website.
-      <button onclick="acceptCookies()">Accept</button>
-    </p>
-  </div>
-
-  <script>
-    function acceptCookies() {
-      document.getElementById('cookie-banner').style.opacity = '0';
-      setTimeout(() => document.getElementById('cookie-banner').style.display = 'none', 400);
-      localStorage.setItem('cookiesAccepted', true);
-    }
-
-    window.onload = function () {
-      if (!localStorage.getItem('cookiesAccepted')) {
-        document.getElementById('cookie-banner').style.display = 'block';
-        setTimeout(() => {
-          document.getElementById('cookie-banner').style.opacity = '1';
-        }, 100);
-      }
-    };
-  </script>
 </body>
 </html>
