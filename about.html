@@ -6,6 +6,36 @@
   <title>About Us - La Bella Vita</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="about.css" />
+  <style>
+    /* Cookie Banner Styles */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #2e2e2e;
+      color: white;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .cookie-banner button {
+      background: #f4b400;
+      color: #000;
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .cookie-banner button:hover {
+      background-color: #e0a800;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -50,8 +80,27 @@
     </section>
   </main>
 
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <span>We use cookies to enhance your experience on our website. By continuing, you agree to our use of cookies.</span>
+    <button onclick="acceptCookies()">Accept</button>
+  </div>
+
   <footer>
     <p>&copy; 2025 La Bella Vita | All rights reserved.</p>
   </footer>
+
+  <script>
+    function acceptCookies() {
+      localStorage.setItem("cookieAccepted", "true");
+      document.getElementById("cookieBanner").style.display = "none";
+    }
+
+    window.onload = function() {
+      if (localStorage.getItem("cookieAccepted") === "true") {
+        document.getElementById("cookieBanner").style.display = "none";
+      }
+    };
+  </script>
 </body>
 </html>
