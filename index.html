@@ -19,16 +19,18 @@
   </header>
 
   <main class="home">
-    <section class="hero">
-      <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="Restaurant Front">
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+      <img src="https://images.pexels.com/photos/1653702/pexels-photo-1653702.jpeg" alt="Restaurant Front" class="animated-img">
       <div class="hero-text">
         <h2>Welcome to La Bella Vita</h2>
         <p>Experience authentic Italian cuisine in the heart of London.</p>
       </div>
     </section>
 
-    <section class="highlight">
-      <img src="https://images.pexels.com/photos/1028423/pexels-photo-1028423.jpeg" alt="Pizza">
+    <!-- Highlight Section -->
+    <section class="highlight fade-in">
+      <img src="https://images.pexels.com/photos/1028423/pexels-photo-1028423.jpeg" alt="Pizza" class="animated-img">
       <p>Freshly prepared dishes using only the finest ingredients.</p>
     </section>
   </main>
@@ -37,19 +39,27 @@
     <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
   </footer>
 
+  <!-- Cookie Banner -->
   <div class="cookie-banner" id="cookie-banner">
-    <p>We use cookies to ensure you get the best experience on our website. <button onclick="acceptCookies()">Accept</button></p>
+    <p>
+      We use cookies to ensure you get the best experience on our website.
+      <button onclick="acceptCookies()">Accept</button>
+    </p>
   </div>
 
   <script>
     function acceptCookies() {
-      document.getElementById('cookie-banner').style.display = 'none';
+      document.getElementById('cookie-banner').style.opacity = '0';
+      setTimeout(() => document.getElementById('cookie-banner').style.display = 'none', 400);
       localStorage.setItem('cookiesAccepted', true);
     }
 
     window.onload = function () {
       if (!localStorage.getItem('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
+        setTimeout(() => {
+          document.getElementById('cookie-banner').style.opacity = '1';
+        }, 100);
       }
     };
   </script>
