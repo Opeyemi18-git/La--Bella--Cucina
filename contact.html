@@ -1,67 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
+<section class="contact-container">
+  <div class="contact-details">
+    <h2>Contact & Reservations</h2>
+    <p><strong>Phone:</strong> +44 20 7946 0958</p>
+    <p><strong>Email:</strong> contact@tastylondon.co.uk</p>
+    <p><strong>Location:</strong> 123 Tasty Street, London, UK</p>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us</title>
-  <link rel="stylesheet" href="contact.css" />
-</head>
-
-<body>
-  <header>
-    <h1>Contact Us</h1>
-  </header>
-
-  <main class="contact-container">
-    <section class="contact-details">
-      <h2>Get in Touch</h2>
-      <p><strong>Phone:</strong> +44 20 7946 0958</p>
-      <p><strong>Email:</strong> contact@tastylondon.co.uk</p>
-      <p><strong>Location:</strong> 123 Tasty Street, London, UK</p>
-
-      <form class="contact-form">
+    <form class="reservation-form">
+      <div class="form-group">
         <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required />
-
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required />
-
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
         <label for="date">Reservation Date:</label>
-        <input type="date" id="date" name="date" required />
-
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
         <label for="time">Reservation Time:</label>
-        <input type="time" id="time" name="time" required />
-
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="form-group">
         <label for="message">Message / Special Requests:</label>
-        <textarea id="message" name="message" rows="5"></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-
-    <section class="map-section">
-      <iframe
-        src="https://www.google.com/maps?q=London,UK&output=embed"
-        width="100%"
-        height="100%"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </section>
-  </main>
-
-  <!-- Cookie Banner -->
-  <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #333; color: #fff; padding: 15px; text-align: center; z-index: 9999;">
-    This website uses cookies to enhance the user experience.
-    <button id="accept-cookies" style="margin-left: 10px; padding: 8px 16px; background: #f4b400; border: none; color: #000; cursor: pointer;">
-      Accept
-    </button>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
   </div>
 
-  <script src="cookie.js"></script>
-</body>
+  <div class="contact-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19864.945918828595!2d-0.14454766715336884!3d51.51006734796296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3337e63e8f%3A0x3a1fcd4b9e556151!2sLondon%2C%20UK!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
 
-</html>
+<style>
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #fdfaf5;
+  }
+
+  .contact-details {
+    flex: 2;
+    min-width: 300px;
+  }
+
+  .reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button[type="submit"] {
+    width: fit-content;
+    padding: 0.6rem 1.2rem;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .contact-map {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+
+    .contact-map {
+      order: 2;
+    }
+  }
+</style>
