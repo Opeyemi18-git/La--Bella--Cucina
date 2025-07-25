@@ -1,84 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Flavor Haven</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
 </head>
 <body>
   <header>
-    <h1>Flavor Haven</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Contact Us</h1>
   </header>
 
-  <main class="contact-page">
-    <section class="contact-info">
-      <h2>Contact Us</h2>
-      <p><strong>Location:</strong> 221B Baker Street, London, UK</p>
-      <p><strong>Phone:</strong> +44 20 7946 0958</p>
-      <p><strong>Email:</strong> contact@flavorhaven.co.uk</p>
-    </section>
-
+  <main class="contact-container">
     <section class="contact-form">
-      <h3>Send Us a Message or Make a Reservation</h3>
-      <form action="https://formspree.io/f/your-formspree-id" method="POST">
+      <h2>Make a Reservation</h2>
+      <form action="#">
         <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required />
+        <input type="text" id="name" name="name" required>
 
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" required>
 
         <label for="date">Reservation Date:</label>
-        <input type="date" id="date" name="date" />
+        <input type="date" id="date" name="date" required>
 
-        <label for="time">Reservation Time:</label>
-        <input type="time" id="time" name="time" />
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <label for="people">Number of People:</label>
+        <input type="number" id="people" name="people" min="1" required>
 
-        <button type="submit">Send Message</button>
+        <label for="message">Special Requests:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Submit Reservation</button>
       </form>
     </section>
 
     <section class="map">
-      <h3>Find Us Here</h3>
+      <h2>Find Us</h2>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19883.64014032014!2d-0.16187835!3d51.5237671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ad2da6c0597%3A0xa7b9024b2eaebc0a!2s221B%20Baker%20St%2C%20London%20NW1%206XE%2C%20UK!5e0!3m2!1sen!2ske!4v1721806000000!5m2!1sen!2ske"
-        width="100%"
-        height="250"
-        style="border:0; border-radius: 8px;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.7553496168114!2d36.82194631426126!3d-1.2920654990546555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d5865e59f3%3A0x4a3d2fcb7493b151!2sNairobi%20CBD!5e0!3m2!1sen!2ske!4v1629460119941!5m2!1sen!2ske"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Flavor Haven. All rights reserved.</p>
+    <p>&copy; 2025 Your Restaurant. All rights reserved.</p>
   </footer>
-
-  <!-- Live Chat: Tawk.to -->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function(){
-      var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/your-tawkto-id/1hxyzabcde';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
 </body>
 </html>
