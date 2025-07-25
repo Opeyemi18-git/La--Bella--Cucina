@@ -1,0 +1,46 @@
+/* index.css — Dedicated styles for index.html (Home Page) */
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fffaf0;
+}
+
+.intro {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  color: #b85c38;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.home-image {
+  text-align: center;
+  max-width: 100%;
+}
+
+.home-image .home-banner {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease;
+}
+
+.home-image .home-banner:hover {
+  transform: scale(1.03);
+}
