@@ -114,3 +114,40 @@ footer {
   color: #fff;
   margin-top: 3rem;
 }
+/* About Page Specific Styling */
+.about-page .about-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.about-page .about-text {
+  flex: 1 1 45%;
+  padding: 1rem;
+  max-width: 600px;
+}
+
+.about-page .about-image {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.about-page .about-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: grayscale(20%) brightness(95%);
+}
+
+.about-page .about-img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%) brightness(100%);
+}
