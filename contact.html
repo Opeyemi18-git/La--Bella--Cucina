@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us</title>
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="contact.css" />
 </head>
+
 <body>
   <header>
     <h1>Contact Us</h1>
   </header>
 
   <main class="contact-container">
-    <section class="contact-form">
-      <h2>Make a Reservation</h2>
-      <form action="#">
+    <section class="contact-details">
+      <h2>Get in Touch</h2>
+      <p><strong>Phone:</strong> +44 20 7946 0958</p>
+      <p><strong>Email:</strong> contact@tastylondon.co.uk</p>
+      <p><strong>Location:</strong> 123 Tasty Street, London, UK</p>
+
+      <form class="contact-form">
         <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required />
 
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required />
 
         <label for="date">Reservation Date:</label>
-        <input type="date" id="date" name="date" required>
+        <input type="date" id="date" name="date" required />
 
-        <label for="time">Time:</label>
-        <input type="time" id="time" name="time" required>
+        <label for="time">Reservation Time:</label>
+        <input type="time" id="time" name="time" required />
 
-        <label for="people">Number of People:</label>
-        <input type="number" id="people" name="people" min="1" required>
+        <label for="message">Message / Special Requests:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
 
-        <label for="message">Special Requests:</label>
-        <textarea id="message" name="message" rows="4"></textarea>
-
-        <button type="submit">Submit Reservation</button>
+        <button type="submit">Submit</button>
       </form>
     </section>
 
-    <section class="map">
-      <h2>Find Us in London</h2>
+    <section class="map-section">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19800.970159830644!2d-0.13570964716060367!3d51.50986546992626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3338fdf47f%3A0xceed9c38425fa697!2sLondon%2C%20UK!5e0!3m2!1sen!2ske!4v1721898000000!5m2!1sen!2ske"
-        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+        src="https://www.google.com/maps?q=London,UK&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Your Restaurant. All rights reserved.</p>
-  </footer>
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #333; color: #fff; padding: 15px; text-align: center; z-index: 9999;">
+    This website uses cookies to enhance the user experience.
+    <button id="accept-cookies" style="margin-left: 10px; padding: 8px 16px; background: #f4b400; border: none; color: #000; cursor: pointer;">
+      Accept
+    </button>
+  </div>
+
+  <script src="cookie.js"></script>
 </body>
+
 </html>
