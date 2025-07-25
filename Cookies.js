@@ -1,34 +1,14 @@
-$(document).ready(function(){
-  $('#contactForm').on('submit', function(e){
-    e.preventDefault();
-    let valid = true;
-    $('#formError').text('');
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
 
-    $('input, textarea').each(function(){
-      if (!this.checkValidity()) {
-        valid = false;
-        $(this).addClass('invalid');
-      } else {
-        $(this).removeClass('invalid');
-      }
-    });
-
-    if (!valid) {
-      $('#formError').text('Please correct the highlighted fields.');
-      return;
-    }
-
-    alert('Thank you for your message, ' + $('#name').val() + '!');
-    this.reset();
-  });
-
-  // Cookie banner
-  if (!localStorage.getItem('cookiesAccepted')) {
-    $('#cookieAccept').show().on('click', function(){
-      localStorage.setItem('cookiesAccepted', 'yes');
-      $(this).hide();
-    });
-  } else {
-    $('#cookieAccept').hide();
+  // Check if user already accepted
+  if (localStorage.getItem("cookiesAccepted") === "true") {
+    banner.style.display = "none";
   }
+
+  acceptBtn.addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+  });
 });
