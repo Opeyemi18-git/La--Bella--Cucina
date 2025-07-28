@@ -1,134 +1,18 @@
-body {
-  font-family: 'Open Sans', sans-serif;
+.header-text-only {
+  text-align: center;
+  background-color: #102c1f; /* deep green */
+  padding: 1.5rem 1rem;
+  color: white;
+}
+
+.header-text-only h1 {
+  font-size: 2.2rem;
   margin: 0;
-  padding: 0;
-  background: url("images/background.jpg") no-repeat center center/cover;
-  color: #fff;
+  font-weight: 600;
 }
 
-/* Header styling */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #102c1f;
-  padding: 1rem 2rem;
-}
-
-.logo {
-  height: 60px;
-}
-
-/* Navigation */
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-.hide-button {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
-  cursor: pointer;
-  display: none;
-}
-
-#menu {
-  display: flex;
-  gap: 2rem;
-}
-
-#menu a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#menu a.active {
-  border-bottom: 2px solid #f4b400;
-}
-
-.home-content {
-  text-align: center;
-  padding: 5rem 2rem;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.tagline {
-  font-size: 3rem;
-  color: #f8f8f8;
-  margin-bottom: 1rem;
-}
-
-.description {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto;
-  color: #ddd;
-}
-
-/* Cookie Banner */
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #2e2e2e;
-  color: white;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  font-size: 0.9rem;
-}
-
-.cookie-banner button {
-  background-color: #f4b400;
-  color: #000;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #102c1f;
-  color: white;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hide-button {
-    display: block;
-  }
-
-  #menu {
-    display: none;
-    flex-direction: column;
-    background-color: #102c1f;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    padding: 1rem;
-    border-radius: 5px;
-  }
-
-  #menu.hide-menu {
-    display: none;
-  }
-
-  #menu.show-menu {
-    display: flex;
-  }
-
-  .cookie-banner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
+.header-text-only .slogan {
+  font-style: italic;
+  color: #f4b400;
+  margin-top: 0.5rem;
 }
