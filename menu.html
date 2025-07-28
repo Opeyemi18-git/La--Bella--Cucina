@@ -26,6 +26,45 @@
       cursor: pointer;
       border-radius: 5px;
     }
+
+    .menu-container {
+      padding: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu-list li {
+      display: flex;
+      margin-bottom: 1.5rem;
+      background: #fdfdfd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .menu-img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .menu-item-info {
+      padding: 1rem;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -58,6 +97,27 @@
           <div class="menu-item-info">
             <h4>Veggie Pizza - £7.00</h4>
             <p>Wood-fired pizza with bell peppers, onions, olives, and mozzarella.</p>
+          </div>
+        </li>
+        <li>
+          <img class="menu-img" src="https://images.pexels.com/photos/4079522/pexels-photo-4079522.jpeg" alt="Lasagna">
+          <div class="menu-item-info">
+            <h4>Lasagna - £8.20</h4>
+            <p>Classic beef lasagna layered with rich tomato sauce, creamy béchamel, and cheese.</p>
+          </div>
+        </li>
+        <li>
+          <img class="menu-img" src="https://images.pexels.com/photos/19681747/pexels-photo-19681747.jpeg" alt="Margherita Pizza">
+          <div class="menu-item-info">
+            <h4>Margherita Pizza - £6.50</h4>
+            <p>Traditional Italian pizza with fresh basil, mozzarella, and tomato sauce.</p>
+          </div>
+        </li>
+        <li>
+          <img class="menu-img" src="https://images.pexels.com/photos/6287493/pexels-photo-6287493.jpeg" alt="Spaghetti Bolognese">
+          <div class="menu-item-info">
+            <h4>Spaghetti Bolognese - £7.80</h4>
+            <p>Slow-cooked beef Bolognese sauce served over al dente spaghetti.</p>
           </div>
         </li>
       </ul>
