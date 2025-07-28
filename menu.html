@@ -2,68 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu | CozyBite Restaurant</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    #cookie-banner {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #222;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      z-index: 1000;
+    /* General styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
     }
-    #cookie-banner button {
-      background-color: #ff9800;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      margin-left: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      text-decoration: underline;
     }
 
     .menu-container {
-      padding: 1rem;
+      padding: 2rem;
       max-width: 1000px;
       margin: 0 auto;
+    }
+
+    .menu-container h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #444;
     }
 
     .menu-list {
       list-style: none;
       padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
     }
 
     .menu-list li {
-      display: flex;
-      margin-bottom: 1.5rem;
-      background: #fdfdfd;
-      border-radius: 10px;
+      background: #fff;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-list li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
 
     .menu-img {
-      width: 200px;
-      height: 150px;
+      width: 100%;
+      height: 200px;
       object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .menu-list li:hover .menu-img {
+      transform: scale(1.05);
     }
 
     .menu-item-info {
       padding: 1rem;
     }
 
-    .fade-in {
-      animation: fadeIn 1s ease-in;
+    .menu-item-info h4 {
+      margin: 0.5rem 0;
+      color: #222;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .menu-item-info p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .add-to-cart {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-top: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background-color: #e68900;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: #fff;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu-list {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .menu-container {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -81,7 +167,6 @@
   </header>
 
   <main class="menu-container">
-    <!-- Main Courses Section -->
     <section class="fade-in">
       <h2>Main Courses</h2>
       <ul class="menu-list">
@@ -90,6 +175,7 @@
           <div class="menu-item-info">
             <h4>Grilled Chicken - £8.50</h4>
             <p>Succulent grilled chicken served with roasted vegetables and a choice of sauce.</p>
+            <button class="add-to-cart" onclick="addToCart('Grilled Chicken')">Add to Cart</button>
           </div>
         </li>
         <li>
@@ -97,6 +183,7 @@
           <div class="menu-item-info">
             <h4>Veggie Pizza - £7.00</h4>
             <p>Wood-fired pizza with bell peppers, onions, olives, and mozzarella.</p>
+            <button class="add-to-cart" onclick="addToCart('Veggie Pizza')">Add to Cart</button>
           </div>
         </li>
         <li>
@@ -104,6 +191,7 @@
           <div class="menu-item-info">
             <h4>Lasagna - £8.20</h4>
             <p>Classic beef lasagna layered with rich tomato sauce, creamy béchamel, and cheese.</p>
+            <button class="add-to-cart" onclick="addToCart('Lasagna')">Add to Cart</button>
           </div>
         </li>
         <li>
@@ -111,6 +199,7 @@
           <div class="menu-item-info">
             <h4>Margherita Pizza - £6.50</h4>
             <p>Traditional Italian pizza with fresh basil, mozzarella, and tomato sauce.</p>
+            <button class="add-to-cart" onclick="addToCart('Margherita Pizza')">Add to Cart</button>
           </div>
         </li>
         <li>
@@ -118,48 +207,51 @@
           <div class="menu-item-info">
             <h4>Spaghetti Bolognese - £7.80</h4>
             <p>Slow-cooked beef Bolognese sauce served over al dente spaghetti.</p>
+            <button class="add-to-cart" onclick="addToCart('Spaghetti Bolognese')">Add to Cart</button>
           </div>
         </li>
       </ul>
     </section>
 
-    <!-- Desserts Section -->
     <section class="fade-in">
       <h2>Desserts</h2>
       <ul class="menu-list">
         <li>
-          <img class="menu-img" src="https://images.pexels.com/photos/754954/pexels-photo-754954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Tiramisu" />
+          <img class="menu-img" src="https://images.pexels.com/photos/754954/pexels-photo-754954.jpeg" alt="Tiramisu">
           <div class="menu-item-info">
             <h4>Tiramisu - £4.50</h4>
             <p>Classic Italian dessert with mascarpone cream, espresso-soaked ladyfingers, and cocoa.</p>
+            <button class="add-to-cart" onclick="addToCart('Tiramisu')">Add to Cart</button>
           </div>
         </li>
         <li>
-          <img class="menu-img" src="https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg" alt="Chocolate Cake Slice" />
+          <img class="menu-img" src="https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg" alt="Chocolate Cake">
           <div class="menu-item-info">
             <h4>Chocolate Cake - £3.80</h4>
             <p>Rich and moist chocolate cake served with vanilla ice cream.</p>
+            <button class="add-to-cart" onclick="addToCart('Chocolate Cake')">Add to Cart</button>
           </div>
         </li>
       </ul>
     </section>
 
-    <!-- Beverages Section -->
     <section class="fade-in">
       <h2>Beverages</h2>
       <ul class="menu-list">
         <li>
-          <img class="menu-img" src="https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg" alt="Cappuccino" />
+          <img class="menu-img" src="https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg" alt="Cappuccino">
           <div class="menu-item-info">
             <h4>Cappuccino - £2.80</h4>
             <p>Freshly brewed espresso topped with steamed milk and foam.</p>
+            <button class="add-to-cart" onclick="addToCart('Cappuccino')">Add to Cart</button>
           </div>
         </li>
         <li>
-          <img class="menu-img" src="https://images.pexels.com/photos/3756489/pexels-photo-3756489.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Orange Juice" />
+          <img class="menu-img" src="https://images.pexels.com/photos/3756489/pexels-photo-3756489.jpeg" alt="Orange Juice">
           <div class="menu-item-info">
             <h4>Orange Juice - £2.20</h4>
             <p>Freshly squeezed orange juice served chilled.</p>
+            <button class="add-to-cart" onclick="addToCart('Orange Juice')">Add to Cart</button>
           </div>
         </li>
       </ul>
@@ -170,27 +262,10 @@
     <p>&copy; 2025 CozyBite Restaurant. All rights reserved.</p>
   </footer>
 
-  <!-- Cookie Consent Banner -->
-  <div id="cookie-banner" style="display:none;">
-    We use cookies to improve your experience on our site. By continuing, you accept our cookie policy.
-    <button onclick="acceptCookies()">Accept</button>
-  </div>
-
   <script>
-    function acceptCookies() {
-      document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 30;
-      document.getElementById('cookie-banner').style.display = 'none';
+    function addToCart(itemName) {
+      alert(itemName + ' has been added to your cart!');
     }
-
-    function cookiesAccepted() {
-      return document.cookie.split(';').some(cookie => cookie.trim().startsWith('cookiesAccepted='));
-    }
-
-    window.onload = function () {
-      if (!cookiesAccepted()) {
-        document.getElementById('cookie-banner').style.display = 'block';
-      }
-    };
   </script>
 </body>
 </html>
