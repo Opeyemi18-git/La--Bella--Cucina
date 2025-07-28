@@ -6,161 +6,19 @@
   <title>Welcome to Bella Vita</title>
   <link rel="stylesheet" href="index.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fff;
-      color: #333;
-    }
-
-    header {
-      background-color: #112c20;
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .site-logo {
-      width: 60px;
-      height: auto;
-    }
-
-    header h1 {
-      color: #fff;
-      font-size: 1.8rem;
-      margin-left: 1rem;
-    }
-
-    nav {
-      background-color: #112c20;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
-      gap: 2rem;
-    }
-
-    nav li {
-      margin: 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 1rem 0;
-      display: inline-block;
-    }
-
-    nav a.active {
-      color: #4caf50;
-    }
-
-    .hero {
-      background: url('https://images.pexels.com/photos/29039070/pexels-photo-29039070.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
-      height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 3rem;
-      max-width: 800px;
-      padding: 0 1rem;
-    }
-
-    .intro {
-      padding: 2rem;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .intro h2 {
-      color: #112c20;
-      font-size: 2rem;
-    }
-
-    .intro p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #444;
-    }
-
-    footer {
-      background-color: #112c20;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
-
-    /* Cookie Banner Styles */
-    .cookie-banner {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #2e2e2e;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      font-size: 0.9rem;
-    }
-
-    .cookie-banner button {
-      background-color: #f4b400;
-      color: #000;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .cookie-banner button:hover {
-      background-color: #e0a800;
-    }
-
-    @media screen and (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .cookie-banner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-      }
-
-      .hero h2 {
-        font-size: 2rem;
-      }
-    }
-  </style>
 </head>
 <body>
+
+  <!-- Header with Logo and Title -->
   <header>
-    <img src="images/logo.png" alt="Bella Vita Logo" class="site-logo">
-    <h1>Bella Vita Restaurant</h1>
+    <img src="logo.png" alt="La Bella Vita Logo" class="site-logo" />
+    <div>
+      <h1>Bella Vita Restaurant</h1>
+      <p style="margin: 0; font-style: italic; color: #f4b400;">Italian Passion</p>
+    </div>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
@@ -170,11 +28,13 @@
     </ul>
   </nav>
 
+  <!-- Hero Section with Background -->
   <main class="home-content">
     <section class="hero">
       <h2>Experience the True Taste of Italy</h2>
     </section>
 
+    <!-- Intro Section -->
     <section class="intro">
       <h2>Welcome to Bella Vita</h2>
       <p>
@@ -190,10 +50,12 @@
     <button onclick="acceptCookies()">Accept</button>
   </div>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Bella Vita Restaurant. All rights reserved.</p>
   </footer>
 
+  <!-- Cookie Script -->
   <script>
     function acceptCookies() {
       localStorage.setItem("cookieAccepted", "true");
@@ -206,5 +68,6 @@
       }
     };
   </script>
+
 </body>
 </html>
