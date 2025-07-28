@@ -2,49 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to Bella Vita</title>
-  <link rel="stylesheet" href="index.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to La Bella Vita</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="favicon.ico" />
+  <script src="https://kit.fontawesome.com/1134bceb92.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- Header with Logo and Title -->
-  <header>
-    <img src="logo.png" alt="La Bella Vita Logo" class="site-logo" />
-    <div>
-      <h1>Bella Vita Restaurant</h1>
-      <p style="margin: 0; font-style: italic; color: #f4b400;">Italian Passion</p>
-    </div>
+  <!-- Header with logo and navigation -->
+  <header class="header">
+    <a href="index.html">
+      <img src="images/logo.png" alt="La Bella Vita Logo" class="logo" />
+    </a>
+    <nav class="navigation">
+      <button id="open-btn" class="hide-button">
+        <i class="fa-solid fa-bars" id="toggle-icon"></i>
+      </button>
+      <div id="menu" class="hide-menu">
+        <div><a href="index.html" class="active">Home</a></div>
+        <div><a href="menu.html">Menu</a></div>
+        <div><a href="about.html">About</a></div>
+        <div><a href="contact.html">Contact</a></div>
+      </div>
+    </nav>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section with Background -->
+  <!-- Main hero content -->
   <main class="home-content">
     <section class="hero">
-      <h2>Experience the True Taste of Italy</h2>
-    </section>
-
-    <!-- Intro Section -->
-    <section class="intro">
-      <h2>Welcome to Bella Vita</h2>
-      <p>
-        At Bella Vita, we serve authentic Italian dishes made from fresh, high-quality ingredients.
+      <h1 class="tagline">Taste Life</h1>
+      <p class="description">
+        At La Bella Vita, we serve authentic Italian dishes made from fresh, high-quality ingredients.
         Come and enjoy a warm, inviting atmosphere paired with delicious meals and fine wines.
       </p>
     </section>
   </main>
 
-  <!-- Cookie Consent Banner -->
+  <!-- Cookie Banner -->
   <div class="cookie-banner" id="cookieBanner">
     <span>We use cookies to improve your experience. By using our site, you accept our cookie policy.</span>
     <button onclick="acceptCookies()">Accept</button>
@@ -52,11 +47,11 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Bella Vita Restaurant. All rights reserved.</p>
+    <p>&copy; 2025 La Bella Vita. All rights reserved.</p>
   </footer>
 
-  <!-- Cookie Script -->
   <script>
+    // Cookie banner logic
     function acceptCookies() {
       localStorage.setItem("cookieAccepted", "true");
       document.getElementById("cookieBanner").style.display = "none";
@@ -67,7 +62,12 @@
         document.getElementById("cookieBanner").style.display = "none";
       }
     };
-  </script>
 
+    // Menu toggle
+    document.getElementById("open-btn").addEventListener("click", function () {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("hide-menu");
+    });
+  </script>
 </body>
 </html>
