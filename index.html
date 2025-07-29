@@ -3,49 +3,241 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to La Bella Cucina | Authentic Italian Restaurant</title>
+  <title>Welcome to La Bella Vita | Authentic Italian Restaurant</title>
   <link rel="stylesheet" href="index.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Inline styles for critical logo rendering */
+    /* Header with deep green background */
+    .header-section {
+      background-color: #102c1f;
+      padding: 20px 0 0;
+      color: white;
+    }
+    
+    /* Horizontal logo layout */
     .logo-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+    
+    .logo-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .logo-text {
+      text-align: left;
+    }
+    
+    .logo-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      margin: 0;
+    }
+    
+    .logo-sub {
+      font-family: 'Open Sans', sans-serif;
+      font-style: italic;
+      color: #f4b400;
+      margin: 5px 0 0;
+    }
+    
+    .food-icon {
+      width: 80px;
+      height: 80px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/135/135731.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    
+    /* Horizontal Navigation styling */
+    nav {
+      background-color: #0a2016;
+      padding: 15px 0;
+      margin-top: 20px;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+      gap: 30px;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+    }
+    
+    nav a:hover {
+      color: #f4b400;
+    }
+    
+    nav a.active {
+      color: #f4b400;
+      border-bottom: 2px solid #f4b400;
+    }
+    
+    /* Hero section with background image */
+    .hero {
+      background: url('https://images.pexels.com/photos/29021173/pexels-photo-29021173.jpeg?auto=compress&cs=tinysrgb&w=800') no-repeat center center/cover;
+      height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 4px #000;
       text-align: center;
-      padding: 20px 0;
-      background-color: #fff;
     }
-    .logo-img {
-      max-width: 350px;
-      width: 100%;
-      height: auto;
+    
+    .hero h2 {
+      font-size: 2.8rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      font-family: 'Playfair Display', serif;
     }
-    @media (max-width: 600px) {
-      .logo-img {
-        max-width: 250px;
+    
+    /* Main content */
+    .home-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .intro {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    
+    .intro h2 {
+      font-family: 'Playfair Display', serif;
+      color: #102c1f;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .intro p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #102c1f;
+      color: white;
+      margin-top: 2rem;
+    }
+    
+    /* Cookie banner */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #2e2e2e;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    
+    .cookie-banner button {
+      background-color: #f4b400;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .logo-container {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      
+      .logo-content {
+        flex-direction: column;
+      }
+      
+      .logo-text {
+        text-align: center;
+      }
+      
+      .logo-main {
+        font-size: 2rem;
+      }
+      
+      .food-icon {
+        width: 60px;
+        height: 60px;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .hero h2 {
+        font-size: 2rem;
+      }
+      
+      .intro {
+        padding: 2rem 1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with optimized logo display -->
-  <header>
+  <!-- Header section with deep green background -->
+  <div class="header-section">
     <div class="logo-container">
-      <img src="3rd-logo.png" alt="La Bella Cucina Italian Restaurant" class="logo-img">
+      <div class="logo-content">
+        <div class="food-icon"></div>
+        <div class="logo-text">
+          <h1 class="logo-main">La Bella Vita</h1>
+          <p class="logo-sub">ITALIAN RESTAURANT</p>
+        </div>
+      </div>
       <p class="slogan">Italian Passion</p>
     </div>
-  </header>
+    
+    <!-- Horizontal Navigation -->
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
-  <!-- Navigation with reordered items -->
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section with Background Image -->
+  <!-- Hero Section with background photo -->
   <main class="home-content">
     <section class="hero">
       <h2>Experience the True Taste of Italy</h2>
@@ -53,9 +245,9 @@
 
     <!-- Intro Section -->
     <section class="intro">
-      <h2>Welcome to La Bella Cucina</h2>
+      <h2>Welcome to La Bella Vita</h2>
       <p>
-        At La Bella Cucina, we serve authentic Italian dishes made from fresh, high-quality ingredients.
+        At La Bella Vita, we serve authentic Italian dishes made from fresh, high-quality ingredients.
         Come and enjoy a warm, inviting atmosphere paired with delicious meals and fine wines.
       </p>
     </section>
@@ -69,7 +261,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 La Bella Cucina Restaurant. All rights reserved.</p>
+    <p>&copy; 2025 La Bella Vita Restaurant. All rights reserved.</p>
   </footer>
 
   <!-- Cookie Script -->
