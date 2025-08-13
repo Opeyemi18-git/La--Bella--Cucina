@@ -35,6 +35,39 @@
     .cookie-banner button:hover {
       background-color: #e0a800;
     }
+
+    /* About Section Side-by-Side Layout */
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem; /* spacing between text and image */
+      padding: 2rem;
+    }
+
+    .about-text {
+      flex: 1 1 400px;
+      max-width: 600px;
+    }
+
+    .about-image {
+      flex: 1 1 400px;
+      max-width: 600px;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px; /* optional rounded corners */
+    }
+
+    @media (max-width: 900px) {
+      .about-section {
+        flex-direction: column; /* stack text and image on smaller screens */
+      }
+    }
   </style>
 </head>
 <body>
@@ -71,7 +104,6 @@
       <img 
         src="about image.jpeg" 
         alt="La Bella Vita Restaurant" 
-        class="responsive-img"
       />
     </section>
   </main>
