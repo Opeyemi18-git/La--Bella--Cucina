@@ -1,4 +1,4 @@
-/* About Section Column Layout */
+/* About Section: Text Above Image */
 .about-section {
   display: flex;
   flex-direction: column; /* stack text above image */
@@ -14,7 +14,7 @@
 
 .about-image {
   width: 100%;
-  max-width: 600px; /* image full width but limited */
+  max-width: 600px; /* limits image width for balance */
 }
 
 .about-image img {
