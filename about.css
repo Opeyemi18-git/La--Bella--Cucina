@@ -1,79 +1,63 @@
-/* about.css — Styles scoped to about.html only */
-
+/* About Section Side-by-Side Layout */
 .about-section {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  background-color: #fffaf5;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: center;
+  gap: 2rem; /* spacing between text and image */
   padding: 2rem;
 }
 
-/* Text styling */
 .about-text {
-  flex: 1;
-  font-family: 'Open Sans', sans-serif;
-  color: #333;
-  line-height: 1.7;
+  flex: 1 1 400px;
+  max-width: 600px;
 }
 
-.about-text h2 {
-  font-size: 2rem;
-  color: #b85c38;
-  margin-bottom: 1rem;
-}
-
-/* Image styling */
 .about-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1 1 400px;
+  max-width: 600px;
 }
 
-.about-image img.responsive-img {
+.about-image img {
   width: 100%;
   height: auto;
-  max-width: 550px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.6s ease, filter 0.4s ease;
-  animation: fadeInZoom 1.2s ease-in-out both;
+  display: block;
+  border-radius: 8px; /* optional rounded corners */
 }
 
-.about-image img.responsive-img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-
-/* Animation */
-@keyframes fadeInZoom {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
   .about-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
+    flex-direction: column; /* stack text and image vertically */
+    gap: 1.5rem;
   }
+}
 
-  .about-text,
-  .about-image {
-    flex: 1 1 100%;
-  }
+/* Cookie Banner Styles */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2e2e2e;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
 
-  .about-image img.responsive-img {
-    max-width: 90%;
-  }
+.cookie-banner button {
+  background: #f4b400;
+  color: #000;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.cookie-banner button:hover {
+  background-color: #e0a800;
 }
