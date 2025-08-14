@@ -1,4 +1,4 @@
-
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,68 +7,127 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
 }
 
-/* Header with Dark Green Theme */
+/* Header */
 header {
-  background-color: #064420; /* Dark green */
+  background-color: #042f20; /* Dark Green */
   color: white;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
 }
 
-/* Logo styling */
-header img {
-  height: 80px;
-}
-
-/* Navigation menu styling */
-header nav ul {
-  list-style: none;
+.logo-container {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeIn 1.5s ease-in;
 }
 
-header nav ul li a {
+.logo {
+  height: 60px;
+}
+
+.branding h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.branding .tagline {
+  display: block;
+  font-style: italic;
+  color: #f4b400; /* Gold */
+  font-size: 0.9rem;
+}
+
+.passion {
+  font-style: italic;
+  color: #f4b400;
+}
+
+/* Navigation */
+nav {
+  background-color: #041b14; /* Even darker green */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li a {
+  display: block;
+  padding: 1rem 1.5rem;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-  color: #f4b400; /* gold accent on hover */
+nav ul li a.active,
+nav ul li a:hover {
+  color: #f4b400;
+  border-bottom: 3px solid #f4b400;
 }
 
-/* Main section spacing */
-main {
-  padding: 2rem;
+/* Hero Section */
+.hero {
+  background: url('hero-image.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Footer styling */
-footer {
-  background-color: #064420;
+.hero-text h2 {
   color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  animation: fadeIn 2s ease-in;
 }
 
-/* Responsive Design: Stack logo and menu on smaller screens */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2e2e2e;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
 
-  header nav ul {
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
+.cookie-banner button {
+  background: #f4b400;
+  color: #000;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.cookie-banner button:hover {
+  background-color: #e0a800;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
