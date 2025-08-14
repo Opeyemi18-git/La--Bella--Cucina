@@ -1,49 +1,38 @@
-/* About Section Side-by-Side Layout */
+/* About Section Layout */
 .about-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column; /* text first, image second */
   align-items: center;
-  align-items: flex-start; /* align items to the top */
-  justify-content: center;
-  gap: 2rem; /* spacing between text and image */
-  gap: 2rem; 
+  gap: 1.5rem;
   padding: 2rem;
 }
 
 .about-text {
-  flex: 1 1 400px;
+  flex: 1 1 auto;
   max-width: 600px;
 }
 
+/* Image Section with Fade-in Animation */
 .about-image {
-  flex: 1 1 400px;
+  flex: 1 1 auto;
   max-width: 600px;
-  max-width: 500px; /* slightly smaller than text for balance */
+  opacity: 0; /* hidden at start */
+  transform: translateY(20px); /* slight slide-up effect */
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 .about-image img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px; /* optional rounded corners */
   border-radius: 8px;
 }
 
-/* Responsive layout for smaller screens */
-@media (max-width: 900px) {
-  .about-section {
-    flex-direction: column; /* stack text and image vertically */
-    flex-direction: column; /* stack text above image */
-    gap: 1.5rem;
-  }
-
-  .about-text {
-    order: 1; /* text appears first */
-  }
-
-  .about-image {
-    order: 2; /* image appears below text */
-    max-width: 100%; /* make image full width on small screens */
+/* Fade-in keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -70,6 +59,7 @@
   cursor: pointer;
   border-radius: 4px;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .cookie-banner button:hover {
