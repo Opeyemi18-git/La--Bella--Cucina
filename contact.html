@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact & Reservations | La Bella Cucina</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: #102c1f;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #fdfaf5;
+    }
+
+    .contact-details {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .reservation-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      width: fit-content;
+      padding: 0.6rem 1.2rem;
+      background-color: #8b0000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #a40000;
+    }
+
+    .contact-map {
+      flex: 1;
+      min-width: 280px;
+      max-width: 400px;
+    }
+
+    .back-home-button {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1100;
+    }
+
+    .back-home-button img {
+      width: 40px;
+      height: 40px;
+      background-color: #28a745;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #2e2e2e;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      font-size: 0.9rem;
+    }
+
+    .cookie-banner button {
+      background-color: #f4b400;
+      color: #000;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .cookie-banner button:hover {
+      background-color: #e0a800;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #102c1f;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+
+      .contact-map {
+        order: 2;
+      }
+
+      .cookie-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .back-home-button {
+        top: 0.5rem;
+        right: 0.5rem;
+      }
+
+      .back-home-button img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <h1>Contact & Reservations</h1>
+  </header>
+
+  <!-- Contact & Map -->
+  <section class="contact-container">
+    <div class="contact-details">
+      <p><strong>Phone:</strong> +44 7459 316293</p>
+      <p><strong>Email:</strong> opeyemivictor612@gmail.com</p>
+      <p><strong>Location:</strong> 10 Rosebery Avenue, EC1R 4TF, United Kingdom</p>
+      <p><strong>Hours:</strong> Open 24 hrs</p>
+
+      <!-- Reservation Form -->
+      <form class="reservation-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="Full Name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="Email Address" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Reservation Date:</label>
+          <input type="date" id="date" name="Reservation Date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Reservation Time:</label>
+          <input type="time" id="time" name="Reservation Time" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message / Special Requests:</label>
+          <textarea id="message" name="Message / Special Requests"></textarea>
+        </div>
+
+        <!-- Optional Redirect -->
+        <input type="hidden" name="_redirect" value="thankyou.html">
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Google Map -->
+    <div class="contact-map">
+      <iframe
+        src="https://www.google.com/maps?q=10+Rosebery+Avenue,+EC1R+4TF,+United+Kingdom&output=embed"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Back to Home Button -->
+  <a href="index.html" class="back-home-button" title="Back to Home">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Back to Home" />
+  </a>
+
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <span>We use cookies to improve your experience. By using our site, you accept our cookie policy.</span>
+    <button onclick="acceptCookies()">Accept</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 La Bella Cucina Restaurant. All rights reserved.</p>
+  </footer>
+
+  <!-- Cookie Script -->
+  <script>
+    function acceptCookies() {
+      localStorage.setItem("cookieAccepted", "true");
+      document.getElementById("cookieBanner").style.display = "none";
+    }
+
+    window.onload = function () {
+      if (localStorage.getItem("cookieAccepted") === "true") {
+        document.getElementById("cookieBanner").style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
