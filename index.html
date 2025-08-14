@@ -8,40 +8,53 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-    <img src="logo.jpg" alt="La Bella Cucina Logo" style="height:80px;">
-    <nav>
-      <ul>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="logo-container">
+      <img src="logo .jpg" alt="La Bella Cucina Logo" class="logo">
+      <div class="branding">
+        <h1>La Bella Cucina</h1>
+        <span class="tagline">ITALIAN RESTAURANT</span>
+      </div>
+    </div>
+    <span class="passion">Italian Passion</span>
   </header>
 
-  <main>
-    <section id="menu">
-      <h2>Menu</h2>
-      <p>Enjoy our delicious Italian dishes, prepared fresh every day.</p>
-    </section>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>At La Bella Cucina, we bring authentic Italian flavors to your plate using the finest ingredients and traditional recipes.</p>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Experience the True Taste of Italy</h2>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p><strong>Phone:</strong> +44 7459 316293</p>
-      <p><strong>Email:</strong> opeyemivictor612@gmail.com</p>
-      <p><strong>Location:</strong> 10 Rosebery Avenue, EC1R 4TF, United Kingdom</p>
-      <p><strong>Hours:</strong> Open 24 hrs</p>
-    </section>
-  </main>
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <span>We use cookies to improve your experience. By using our site, you accept our cookie policy.</span>
+    <button onclick="acceptCookies()">Accept</button>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 La Bella Cucina. All rights reserved.</p>
-  </footer>
+  <script>
+    function acceptCookies() {
+      localStorage.setItem("cookieAccepted", "true");
+      document.getElementById("cookieBanner").style.display = "none";
+    }
+
+    window.onload = function() {
+      if (localStorage.getItem("cookieAccepted") === "true") {
+        document.getElementById("cookieBanner").style.display = "none";
+      }
+    };
+  </script>
 
 </body>
 </html>
