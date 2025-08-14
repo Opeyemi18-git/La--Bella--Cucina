@@ -1,0 +1,11 @@
+$(document).ready(function() {
+    $("footer").html(`
+        <p>&copy; 2025 La Bella Cucina Restaurant. All rights reserved.</p>
+        <p>
+            📞 +44 7459 316293 | 
+            📧 <a href="mailto:opeyemivictor612@gmail.com" style="color: white;">opeyemivictor612@gmail.com</a> | 
+            📍 10 Rosebery Avenue, EC1R 4TF, United Kingdom | 
+            ⏰ Open 24 hrs
+        </p>
+    `);
+});
