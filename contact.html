@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact & Reservations</title>
+  <title>Contact & Reservations | La Bella Cucina</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
   <style>
     body {
@@ -11,6 +11,18 @@
       margin: 0;
       padding: 0;
       background-color: #fff;
+    }
+
+    header {
+      background-color: #102c1f;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
     }
 
     .contact-container {
@@ -38,6 +50,11 @@
       flex-direction: column;
     }
 
+    .form-group label {
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+    }
+
     .form-group input,
     .form-group textarea {
       padding: 0.5rem;
@@ -54,6 +71,10 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #a40000;
     }
 
     .contact-map {
@@ -106,6 +127,14 @@
       background-color: #e0a800;
     }
 
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #102c1f;
+      color: white;
+      margin-top: 2rem;
+    }
+
     @media screen and (max-width: 768px) {
       .contact-container {
         flex-direction: column;
@@ -135,15 +164,20 @@
 </head>
 <body>
 
+  <!-- Page Header -->
+  <header>
+    <h1>Contact & Reservations</h1>
+  </header>
+
+  <!-- Contact & Map -->
   <section class="contact-container">
     <div class="contact-details">
-      <h2>Contact & Reservations</h2>
       <p><strong>Phone:</strong> +44 7459 316293</p>
       <p><strong>Email:</strong> opeyemivictor612@gmail.com</p>
       <p><strong>Location:</strong> 10 Rosebery Avenue, EC1R 4TF, United Kingdom</p>
       <p><strong>Hours:</strong> Open 24 hrs</p>
 
-      <!-- Updated Form -->
+      <!-- Reservation Form -->
       <form class="reservation-form" action="https://formspree.io/f/your-form-id" method="POST">
         <div class="form-group">
           <label for="name">Full Name:</label>
@@ -166,13 +200,14 @@
           <textarea id="message" name="Message / Special Requests"></textarea>
         </div>
 
-        <!-- Optional: Redirect after submission -->
+        <!-- Optional Redirect -->
         <input type="hidden" name="_redirect" value="thankyou.html">
         
         <button type="submit">Submit</button>
       </form>
     </div>
 
+    <!-- Google Map -->
     <div class="contact-map">
       <iframe
         src="https://www.google.com/maps?q=10+Rosebery+Avenue,+EC1R+4TF,+United+Kingdom&output=embed"
@@ -191,6 +226,12 @@
     <button onclick="acceptCookies()">Accept</button>
   </div>
 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 La Bella Cucina Restaurant. All rights reserved.</p>
+  </footer>
+
+  <!-- Cookie Script -->
   <script>
     function acceptCookies() {
       localStorage.setItem("cookieAccepted", "true");
