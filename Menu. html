@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | CozyBite Restaurant</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* General styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    .menu-container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .menu-container h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .menu-list li {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-list li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .menu-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .menu-list li:hover .menu-img {
+      transform: scale(1.05);
+    }
+
+    .menu-item-info {
+      padding: 1rem;
+    }
+
+    .menu-item-info h4 {
+      margin: 0.5rem 0;
+      color: #222;
+    }
+
+    .menu-item-info p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .order-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .order-qty {
+      width: 50px;
+      text-align: center;
+      padding: 0.4rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .order-controls button {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .order-controls button:hover {
+      background-color: #e68900;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #222;
+      color: #fff;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu-list {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .menu-container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CozyBite Restaurant Menu</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="menu-container">
+    <!-- Main Courses -->
+    <section class="fade-in">
+      <h2>Main Courses</h2>
+      <ul class="menu-list">
+        <li>
+          <img class="menu-img" src="Grilled Chicken.jpeg" alt="Grilled Chicken">
+          <div class="menu-item-info">
+            <h4>Grilled Chicken - £8.50</h4>
+            <p>Succulent grilled chicken served with roasted vegetables and a choice of sauce.</p>
+            <div class="order-controls">
+              <button onclick="decreaseQty(this)">−</button>
+              <input type="number" value="1" min="1" class="order-qty" />
+              <button onclick="increaseQty(this)">+</button>
+              <button class="order-now" onclick="placeOrder('Grilled Chicken', this)">Order Now</button>
+            </div>
+          </div>
+        </li>
+
+        </li>
+
+        <li>
+          <img class="menu-img" src="veggie_ pizza.jpg" alt="Veggie Pizza">
+          <div class="menu-item-info">
+            <h4>Veggie Pizza - £7.00</h4>
+            <p>Wood-fired pizza with bell peppers, onions, olives, and mozzarella.</p>
+            <div class="order-controls">
+              <button onclick="decreaseQty(this)">−</button>
+              <input type="number" value="1" min="1" class="order-qty" />
+              <button onclick="increaseQty(this)">+</button>
+              <button class="order-now" onclick="placeOrder('Veggie Pizza', this)">Order Now</button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <img class="menu-img" src="Lasagna.jpeg" alt="Lasagna">
+          <div class="menu-item-info">
+            <h4>Lasagna - £8.20</h4>
+            <p>Classic beef lasagna layered with rich tomato sauce, creamy béchamel, and cheese.</p>
+            <div class="order-controls">
+              <button onclick="decreaseQty(this)">−</button>
+              <input type="number" value="1" min="1" class="order-qty" />
+              <button onclick="increaseQty(this)">+</button>
+              <button class="order-now" onclick="placeOrder('Lasagna', this)">Order Now</button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <img class="menu-img" src="Margherita Pizza.jpeg" alt="Margherita Pizza">
+          <div class="menu-item-info">
+            <h4>Margherita Pizza - £6.50</h4>
+            <p>Traditional Italian pizza with fresh basil, mozzarella, and tomato sauce.</p>
+            <div class="order-controls">
+              <button onclick="decreaseQty(this)">−</button>
+              <input type="number" value="1" min="1" class="order-qty" />
+              <button onclick="increaseQty(this)">+</button>
+              <button class="order-now" onclick="placeOrder('Margherita Pizza', this)">Order Now</button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <img class="menu-img" src="spaghetti _bolognese.jpg" alt="Spaghetti Bolognese">
+          <div class="menu-item-info">
+            <h4>Spaghetti Bolognese - £7.80</h4>
+            <p>Slow-cooked beef Bolognese sauce served over al dente spaghetti.</p>
+            <div class="order-controls">
+              <button onclick="decreaseQty(this)">−</button>
+              <input type="number" value="1" min="1" class="order-qty" />
+              <button onclick="increaseQty(this)">+</button>
+              <button class="order-now" onclick="placeOrder('Spaghetti Bolognese', this)">Order Now</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Desserts -->
+    <section class="fade-in">
+      <h2>Desserts</h2>
+      <ul class="menu-list">
+        <li>
+          <img class="menu-img" src="tiramisu.jpg" alt="Tiramisu">
+          <div class="menu-item-info">
+            <h4>Tiramisu - £4.50</h4>
+            <p>Classic Italian dessert with mascarpone cream, espresso-soaked ladyfingers, and cocoa.</p
+            div class="order-controls">
+              <button onclick="decreaseQty(this)">−</button>
+              <input type="number" value="1" min="1" class="order-qty" />
+              <button onclick="increaseQty(this)">+</button>
+              <button class="order-now" onclick="placeOrder('Spaghetti Bolognese', this)">Order Now</button>
+            </div>
+              <li>
+  <img class="menu-img" src="risotto.jpg" alt="Risotto">
+  <img class="menu-img" src="Rositto.jpg" alt="Risotto">
+  <div class="menu-item-info">
+    <h4>Risotto - £9.50</h4>
+    <p>Arborio rice, broth, onions, garlic, butter, wine, cheese, herbs, vegetables or meat.</p>
+    <div class="order-controls">
+      <button onclick="decreaseQty(this)">−</button>
+      <input type="number" value="1" min="1" class="order-qty" />
+      <button onclick="increaseQty(this)">+</button>
+      <button class="order-now" onclick="placeOrder('Risotto', this)">Order Now</button>
+    </div>
+  </div>
+</li>
+
+<li>
+  <img class="menu-img" src="cappuccino.jpeg" alt="Cappuccino">
+  <div class="menu-item-info">
+    <h4>Cappuccino - £3.20</h4>
+    <p>Espresso, steamed milk, milk foam, cocoa powder or cinnamon.</p>
+    <div class="order-controls">
+      <button onclick="decreaseQty(this)">−</button>
+      <input type="number" value="1" min="1" class="order-qty" />
+      <button onclick="increaseQty(this)">+</button>
+      <button class="order-now" onclick="placeOrder('Cappuccino', this)">Order Now</button>
+    </div>
+  </div>
+</li>
+
+<li>
+  <img class="menu-img" src="Orange Juice.jpeg" alt="Orange Juice">
+  <div class="menu-item-info">
+    <h4>Orange Juice - £3.50</h4>
+    <p>Oranges, water, sugar or sweetener, ice.</p>
+    <div class="order-controls">
+      <button onclick="decreaseQty(this)">−</button>
+      <input type="number" value="1" min="1" class="order-qty" />
+      <button onclick="increaseQty(this)">+</button>
+      <button class="order-now" onclick="placeOrder('Orange Juice', this)">Order Now</button>
+    </div>
+  </div>
+</li>
