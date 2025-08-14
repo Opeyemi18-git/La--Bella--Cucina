@@ -1,112 +1,288 @@
-/* General Styles */
+/* index.css */
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fffaf0;
+  background-color: #ffffff;
   color: #333;
 }
 
 header {
-  background-color: #8B0000;
-  color: white;
-  padding: 20px;
+  background-color: #ffffff; /* Changed from deep green to white to match logo */
+  color: #102c1f;
   text-align: center;
+  padding: 1rem 1rem 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Header with deep green background */
+.header-section {
+  background-color: #102c1f;
+  padding: 20px 0 0;
+  color: white;
 }
 
-footer {
-  background-color: #8B0000;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-/* Main Contact Layout */
-.contact-container {
+/* Horizontal logo layout */
+.logo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 0 20px;
+}
+
+.logo-img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+.logo-content {
+  display: flex;
+  align-items: center;
   gap: 20px;
 }
 
-.contact-form {
-  flex: 1 1 55%;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+.logo-text {
+  text-align: left;
 }
 
-.contact-form h2 {
-  margin-top: 0;
-  color: #8B0000;
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form label {
-  margin: 10px 0 5px;
-  font-weight: 600;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1em;
-}
-
-.contact-form button {
-  margin-top: 15px;
-  padding: 12px;
-  background-color: #8B0000;
+.logo-main {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: white;
+  margin: 0;
+}
+
+.logo-sub {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  color: #f4b400;
+  margin: 5px 0 0;
+}
+
+.food-icon {
+  width: 80px;
+  height: 80px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/135/135731.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.slogan {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #8B0000; /* Burgundy color */
+  color: #f4b400;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Navigation styling */
+nav {
+  background-color: #102c1f; /* Deep green moved from header to nav */
+  text-align: center;
+  padding: 0.7rem 0;
+  background-color: #0a2016;
+  margin-top: 20px;
+  padding: 15px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white; /* Changed from dark to white for better contrast */
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #f4b400;
+}
+
+nav a.active {
+  color: #f4b400;
+  border-bottom: 2px solid #f4b400;
+  text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+  background: url('https://images.pexels.com/photos/29021173/pexels-photo-29021173.jpeg?auto=compress&cs=tinysrgb&w=800') no-repeat center center/cover;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 4px #000;
+  text-align: center;
+  margin-top: -1px; /* Fixes potential gap between nav and hero */
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  padding: 0 1rem;
+  font-size: 2.8rem;
+  font-family: 'Playfair Display', serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Main content */
+.home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  color: #102c1f;
+  font-family: 'Playfair Display', serif;
+  color: #102c1f;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Cookie banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2e2e2e;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+
+.cookie-banner button {
+  background-color: #f4b400;
+  color: #000;
   border: none;
-  border-radius: 6px;
-  font-size: 1em;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: #a10000;
+.cookie-banner button:hover {
+  background-color: #e0a800;
 }
 
-/* Map Section */
-.map {
-  flex: 1 1 40%;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  padding: 2rem;
+  background-color: #102c1f;
+  color: white;
+  margin-top: 2rem;
+  font-size: 0.9rem;
 }
 
-.map h2 {
-  margin-top: 0;
-  color: #8B0000;
-}
-
-.map iframe {
-  width: 100%;
-  height: 250px;
-  border: none;
-  border-radius: 8px;
-}
-
-/* Responsive */
-@media screen and (max-width: 900px) {
-  .contact-container {
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .logo-img {
+    max-width: 250px;
+  .logo-container {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .logo-content {
     flex-direction: column;
   }
+  
+  .logo-text {
+    text-align: center;
+  }
+  
+  .logo-main {
+    font-size: 2rem;
+  }
+  
+  .food-icon {
+    width: 60px;
+    height: 60px;
+  }
 
-  .map,
-  .contact-form {
-    flex: 1 1 100%;
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    gap: 10px;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .intro {
+    padding: 2rem 1rem;
+  }
+
+  .cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+
+  .cookie-banner button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .slogan {
+    font-size: 1rem;
   }
 }
