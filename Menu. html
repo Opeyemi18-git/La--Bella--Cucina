@@ -277,6 +277,7 @@
               <button class="order-now" onclick="placeOrder('Spaghetti Bolognese', this)">Order Now</button>
             </div>
               <li>
+  <img class="menu-img" src="risotto.jpg" alt="Risotto">
   <img class="menu-img" src="Rositto.jpg" alt="Risotto">
   <div class="menu-item-info">
     <h4>Risotto - £9.50</h4>
@@ -317,4 +318,3 @@
     </div>
   </div>
 </li>
-
