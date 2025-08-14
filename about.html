@@ -3,13 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - La Bella Cucina</title>
+  <title>About Us - La Bella Vita</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="about.css" />
+  <style>
+    /* Cookie Banner Styles */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #2e2e2e;
+      color: white;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .cookie-banner button {
+      background: #f4b400;
+      color: #000;
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .cookie-banner button:hover {
+      background-color: #e0a800;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>La Bella Cucina</h1>
+    <h1>La Bella Vita</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -22,10 +52,10 @@
 
   <main class="about-section">
     <section class="about-text">
-      <h2>About La Bella Cucina</h2>
+      <h2>About La Bella Vita</h2>
       <p>
-        Welcome to <strong>La Bella Cucina</strong>, a charming Italian-inspired restaurant located in the heart of London. 
-        Our name means “The Beautiful Kitchen” and that is exactly what we aim to offer with every meal and moment spent with us.
+        Welcome to <strong>La Bella Vita</strong>, a charming Italian-inspired restaurant located in the heart of London. 
+        Our name means “The Beautiful Life” and that is exactly what we aim to offer with every meal and moment spent with us.
       </p>
       <p>
         The restaurant was founded in 2015, to bring warmth, passion, and flavors of traditional Italian cuisine to a modern setting. 
@@ -33,12 +63,16 @@
       </p>
       <p>
         We also cater to private events, offer takeaway services, and provide a selection of vegetarian and gluten-free options.
-        Join us and enjoy La Bella Cucina where every dish tells a story.
+        Join us and enjoy La Bella Vita where every dish tells a story.
       </p>
     </section>
 
     <section class="about-image">
-      <img src="about image.jpeg" alt="La Bella Cucina Restaurant" />
+      <img 
+        src="about image.jpeg" 
+        alt="La Bella Vita Restaurant" 
+        class="responsive-img"
+      />
     </section>
   </main>
 
@@ -49,7 +83,7 @@
   </div>
 
   <footer>
-    <p>&copy; 2025 La Bella Cucina | All rights reserved.</p>
+    <p>&copy; 2025 La Bella Vita | All rights reserved.</p>
   </footer>
 
   <script>

@@ -1,54 +1,54 @@
-/* About Section: Text Above Image */
+/* about.css — Styles scoped to about.html only */
+
 .about-section {
   display: flex;
-  flex-direction: column; /* stack text above image */
+  flex-wrap: wrap;
   align-items: center;
-  gap: 2rem; 
+  justify-content: space-between;
   padding: 2rem;
+  gap: 2rem;
+  background-color: #fffaf5;
 }
 
 .about-text {
-  width: 100%;
-  max-width: 600px;
+  flex: 1 1 50%;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #b85c38;
+  margin-bottom: 1rem;
 }
 
 .about-image {
-  width: 100%;
-  max-width: 600px; /* limits image width for balance */
+  flex: 1 1 45%;
+  text-align: center;
 }
 
-.about-image img {
-  width: 100%;
+.about-image img.responsive-img {
+  max-width: 100%;
   height: auto;
-  display: block;
-  border-radius: 8px; /* optional rounded corners */
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.6s ease, filter 0.4s ease;
+  animation: fadeInZoom 1.2s ease-in-out both;
 }
 
-/* Cookie Banner Styles */
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #2e2e2e;
-  color: white;
-  padding: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 9999;
+.about-image img.responsive-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
-.cookie-banner button {
-  background: #f4b400;
-  color: #000;
-  border: none;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.cookie-banner button:hover {
-  background-color: #e0a800;
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
