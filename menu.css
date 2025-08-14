@@ -148,36 +148,3 @@ footer {
     font-size: 1rem;
   }
 }
-
-/* NEW STYLES FOR ORDER CONTROLS */
-.order-controls {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-.order-qty {
-  width: 60px;
-  text-align: center;
-  padding: 0.4rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.order-controls button {
-  background-color: #ff9800;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.order-controls button:hover {
-  background-color: #e68900;
-}
