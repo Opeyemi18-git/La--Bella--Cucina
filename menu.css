@@ -52,13 +52,29 @@ nav a:hover, nav a.active {
   display: inline-block;
 }
 
-/* Menu List */
+/* Menu List - Main Courses (Grid Layout) */
 .menu-list {
   list-style: none;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
+}
+
+/* Horizontal Layout for Desserts and Beverages */
+.desserts-section .menu-list,
+.beverages-section .menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.desserts-section .menu-list li,
+.beverages-section .menu-list li {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
 }
 
 .menu-list li {
@@ -188,6 +204,16 @@ footer p {
 @media (max-width: 768px) {
   .menu-list {
     grid-template-columns: 1fr;
+  }
+  
+  .desserts-section .menu-list,
+  .beverages-section .menu-list {
+    flex-direction: column;
+  }
+  
+  .desserts-section .menu-list li,
+  .beverages-section .menu-list li {
+    max-width: 100%;
   }
   
   nav ul {
