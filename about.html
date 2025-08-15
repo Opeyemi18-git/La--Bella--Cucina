@@ -3,11 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - La Bella Vita</title>
   <title>About Us - La Bella Cucina</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="about.css" />
   <style>
+    /* Navigation Styles */
+    .site-header {
+      background-color: #2e2e2e;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .site-header nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .site-header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .site-header nav ul li a:hover,
+    .site-header nav ul li a.active {
+      text-decoration: underline;
+    }
+
     /* Cookie Banner Styles */
     .cookie-banner {
       position: fixed;
@@ -43,7 +77,7 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 2rem; /* spacing between text and image */
+      gap: 2rem;
       padding: 2rem;
     }
 
@@ -61,19 +95,21 @@
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 8px; /* optional rounded corners */
+      border-radius: 8px;
     }
 
     @media (max-width: 900px) {
       .about-section {
-        flex-direction: column; /* stack text and image on smaller screens */
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>La Bella Vita</h1>
+
+  <!-- New Horizontal Header -->
+  <div class="site-header">
+    <h1>La Bella Cucina</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -82,14 +118,13 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
 
+  <!-- About Content -->
   <main class="about-section">
     <section class="about-text">
-      <h2>About La Bella Vita</h2>
       <h2>About La Bella Cucina</h2>
       <p>
-        Welcome to <strong>La Bella Vita</strong>, a charming Italian-inspired restaurant located in the heart of London. 
         Welcome to <strong>La Bella Cucina</strong>, a charming Italian-inspired restaurant located in the heart of London. 
         Our name means “The Beautiful Life” and that is exactly what we aim to offer with every meal and moment spent with us.
       </p>
@@ -99,15 +134,12 @@
       </p>
       <p>
         We also cater to private events, offer takeaway services, and provide a selection of vegetarian and gluten-free options.
-        Join us and enjoy La Bella Vita where every dish tells a story.
+        Join us and enjoy La Bella Cucina where every dish tells a story.
       </p>
     </section>
 
     <section class="about-image">
-      <img 
-        src="about jpg.jpeg" 
-        alt="La Bella Vita Restaurant" 
-      />
+      <img src="about jpg.jpeg" alt="La Bella Cucina Restaurant" />
     </section>
   </main>
 
@@ -118,7 +150,7 @@
   </div>
 
   <footer>
-    <p>&copy; 2025 La Bella Vita | All rights reserved.</p>
+    <p>&copy; 2025 La Bella Cucina | All rights reserved.</p>
   </footer>
 
   <script>
