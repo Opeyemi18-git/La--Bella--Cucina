@@ -186,7 +186,7 @@
           </div>
         </li>
         <li>
-          <img class="menu-img" src="" alt="Lasagna">
+          <img class="menu-img" src="Lasagna.jpeg" alt="Lasagna">
           <div class="menu-item-info">
             <h4>Lasagna - £8.20</h4>
             <p>Classic beef lasagna layered with rich tomato sauce, creamy béchamel, and cheese.</p>
@@ -226,6 +226,14 @@
             <h4>Tiramisu - £4.50</h4>
             <p>Classic Italian dessert with mascarpone cream, espresso-soaked ladyfingers, and cocoa.</p>
             <button class="add-to-cart" onclick="addToCart('Tiramisu')">Add to Cart</button>
+          </div>
+        </li>
+        <li>
+          <img class="menu-img" src="Rositto.jpg" alt=" Rositto">
+          <div class="menu-item-info">
+            <h4> Rositto - £3.50</h4>
+            <p>Classic Italian dessert with Arborio rice, olive oil, onion, white wine, Parmesan cheese.</p>
+            <button class="add-to-cart" onclick="addToCart('Rositto')">Add to Cart</button>
           </div>
         </li>
         <li>
