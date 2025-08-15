@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | La Bella Cucina</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+  <style>
+    /* Base Styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1rem 0;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+    
+    nav a:hover, nav a.active {
+      background-color: #ff9800;
+      color: white;
+    }
+    
+    .menu-container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .menu-container h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #444;
+      border-bottom: 2px solid #ff9800;
+      padding-bottom: 0.5rem;
+      text-transform: capitalize;
+    }
+    
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .menu-list li {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .menu-list li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    .menu-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    
+    .menu-list li:hover .menu-img {
+      transform: scale(1.05);
+    }
+    
+    .menu-item-info {
+      padding: 1rem;
+    }
+    
+    .menu-item-info h4 {
+      margin: 0.5rem 0;
+      color: #222;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+    }
+    
+    .menu-item-info p {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+    
+    .price {
+      font-weight: bold;
+      color: #ff9800;
+      font-size: 1.1rem;
+    }
+    
+    .order-now {
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      padding: 0.7rem 1rem;
+      margin-top: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      font-size: 1rem;
+    }
+    
+    .order-now:hover {
+      background-color: #e68900;
+    }
+    
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+    }
+    
+    .quantity-btn {
+      background-color: #ddd;
+      border: none;
+      width: 30px;
+      height: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+    
+    .quantity-btn:hover {
+      background-color: #ccc;
+    }
+    
+    .quantity-input {
+      width: 50px;
+      text-align: center;
+      margin: 0 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 0.3rem;
+      font-size: 1rem;
+    }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.5s forwards;
+    }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #222;
+      color: #fff;
+      margin-top: 3rem;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .menu-list {
+        grid-template-columns: 1fr;
+      }
+      
+      nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      
+      nav a {
+        padding: 0.5rem;
+      }
+      
+      .menu-container {
+        padding: 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      nav a {
+        display: block;
+        text-align: center;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>La Bella Cucina</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="menu-container">
+    <section class="fade-in">
+      <h2>Main Courses</h2>
+      <ul class="menu-list">
+        <li>
+          <img class="menu-img" src="images/Grilled Chicken.jpeg" alt="Grilled Chicken">
+          <div class="menu-item-info">
+            <h4>Grilled Chicken</h4>
+            <p>Juicy chicken breast marinated with herbs and grilled to perfection</p>
+            <div class="price">£14.50</div>
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <button class="order-now">Order Now</button>
+          </div>
+        </li>
+        
+        <li>
+          <img class="menu-img" src="images/Margherita Pizza.jpeg" alt="Veggie Pizza">
+          <div class="menu-item-info">
+            <h4>Veggie Pizza</h4>
+            <p>Assorted fresh vegetables and mozzarella on tomato base</p>
+            <div class="price">£11.50</div>
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <button class="order-now">Order Now</button>
+          </div>
+        </li>
+        
+        <li>
+          <img class="menu-img" src="images/Lasagna.jpeg" alt="Lasagna">
+          <div class="menu-item-info">
+            <h4>Lasagna</h4>
+            <p>Layers of pasta, meat sauce, béchamel, and melted cheese</p>
+            <div class="price">£12.00</div>
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <button class="order-now">Order Now</button>
+          </div>
+        </li>
+        
+        <li>
+          <img class="menu-img" src="images/Margherita Pizza.jpeg" alt="Margherita Pizza">
+          <div class="menu-item-info">
+            <h4>Margherita Pizza</h4>
+            <p>Traditional pizza with tomato sauce, mozzarella, and basil</p>
+            <div class="price">£10.00</div>
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <button class="order-now">Order Now</button>
+          </div>
+        </li>
+        
+        <li>
+          <img class="menu-img" src="images/Spaghetti Bolognese.jpeg" alt="Spaghetti Bolognese">
+          <div class="menu-item-info">
+            <h4>Spaghetti Bolognese</h4>
+            <p>Spaghetti with rich meat sauce made with tomatoes and herbs</p>
+            <div class="price">£13.00</div>
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <button class="order-now">Order Now</button>
+          </div>
+        </li>
+        
+        <li>
+          <img class="menu-img" src="images/Rositto.jpg" alt="Risotto">
+          <div class="menu-item-info">
+            <h4>Risotto</h4>
+            <p>Creamy Italian rice dish cooked with broth and parmesan cheese</p>
+            <div class="price">£11.50</div>
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <button class="order-now">Order Now</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="fade-in">
+      <h2>Desserts</h2>
+      <ul class="menu-list">
+        <li>
+          <img class="menu-img" src="images/Tiramisu.jpeg" alt="Tiramisu">
+          <div class="menu-item-info">
+            <h4>Tiramisu</h4>
+            <p>Classic Italian dessert with coffee-soaked ladyfingers</p>
+            <div class="price">£6.50</div>
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <button class="order-now">Order Now</button>
+          </div>
+        </li>
+        
+        <li>
+          <img class="menu-img" src="images/Chocolate Cake.jpeg" alt="Chocolate Cake">
+          <div class="menu-item-info">
+            <h4>Chocolate Cake</h4>
+            <p>Rich chocolate cake with layers of chocolate ganache</p>
+            <div class="price">£5.50</div>
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <button class="order-now">Order Now</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="fade-in">
+      <h2>Beverages</h2>
+      <ul class="menu-list">
+        <li>
+          <img class="menu-img" src="images/Cappuccino.jpeg" alt="Cappuccino">
+          <div class="menu-item-info">
+            <h4>Cappuccino</h4>
+            <p>Espresso with steamed milk and foam</p>
+            <div class="price">£3.50</div>
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <button class="order-now">Order Now</button>
+          </div>
+        </li>
+        
+        <li>
+          <img class="menu-img" src="images/Orange Juice.jpeg" alt="Orange Juice">
+          <div class="menu-item-info">
+            <h4>Orange Juice</h4>
+            <p>Freshly squeezed orange juice</p>
+            <div class="price">£3.00</div>
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <button class="order-now">Order Now</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 La Bella Cucina. All rights reserved.</p>
+    <p>Open Tuesday-Sunday: 5pm-11pm</p>
+  </footer>
+
+  <script>
+    // Quantity selector functionality
+    document.querySelectorAll('.quantity-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const input = this.parentElement.querySelector('.quantity-input');
+        let value = parseInt(input.value);
+        if (this.classList.contains('minus')) {
+          input.value = value > 1 ? value - 1 : 1;
+        } else {
+          input.value = value + 1;
+        }
+      });
+    });
+
+    // Order now functionality
+    document.querySelectorAll('.order-now').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.menu-item-info').querySelector('h4').textContent;
+        const quantity = this.parentElement.querySelector('.quantity-input').value;
+        alert(`Ordered ${quantity} ${item}(s)! Thank you!`);
+      });
+    });
+
+    // Animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.fade-in');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeInUp 0.5s forwards';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>
