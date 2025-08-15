@@ -242,7 +242,7 @@
       <h2>Main Courses</h2>
       <ul class="menu-list">
         <li>
-          <img class="menu-img" src="Grilled Chicken.jpeg" alt="Grilled Chicken">
+          <img class="menu-img" src="grilled Chicken.jpeg" alt="Grilled Chicken">
           <div class="menu-item-info">
             <h4>Grilled Chicken</h4>
             <p>Succulent grilled chicken served with roasted vegetables and a choice of sauce.</p>
@@ -256,7 +256,7 @@
           </div>
         </li>
         <li>
-          <img class="menu-img" src="Veggie Pizza.jpg" alt="Veggie Pizza">
+          <img class="menu-img" src="veggie pizza.jpg" alt="Veggie Pizza">
           <div class="menu-item-info">
             <h4>Veggie Pizza</h4>
             <p>Wood-fired pizza with bell peppers, onions, olives, and mozzarella.</p>
@@ -270,7 +270,7 @@
           </div>
         </li>
         <li>
-          <img class="menu-img" src="Lasagna.jpg" alt="Lasagna">
+          <img class="menu-img" src="Lasagna.jpeg" alt="Lasagna">
           <div class="menu-item-info">
             <h4>Lasagna</h4>
             <p>Classic beef lasagna layered with rich tomato sauce, creamy béchamel, and cheese.</p>
@@ -298,7 +298,7 @@
           </div>
         </li>
         <li>
-          <img class="menu-img" src="Spaghetti Bolognese.jpeg" alt="Spaghetti Bolognese">
+          <img class="menu-img" src="spaghetti Bolognese.jpeg" alt="Spaghetti Bolognese">
           <div class="menu-item-info">
             <h4>Spaghetti Bolognese</h4>
             <p>Slow-cooked beef Bolognese sauce served over al dente spaghetti.</p>
@@ -332,7 +332,7 @@
       <h2>Desserts</h2>
       <ul class="menu-list">
         <li>
-          <img class="menu-img" src="Tiramisu.jpeg" alt="Tiramisu">
+          <img class="menu-img" src="tiramisu.jpeg" alt="Tiramisu">
           <div class="menu-item-info">
             <h4>Tiramisu</h4>
             <p>Classic Italian dessert with mascarpone cream, espresso-soaked ladyfingers, and cocoa.</p>
@@ -346,7 +346,7 @@
           </div>
         </li>
         <li>
-          <img class="menu-img" src="Chocolate Cake.jpeg" alt="Chocolate Cake">
+          <img class="menu-img" src="chocolate Cake.jpeg" alt="Chocolate Cake">
           <div class="menu-item-info">
             <h4>Chocolate Cake</h4>
             <p>Rich and moist chocolate cake served with vanilla ice cream.</p>
@@ -366,7 +366,7 @@
       <h2>Beverages</h2>
       <ul class="menu-list">
         <li>
-          <img class="menu-img" src="Cappuccino.jpeg" alt="Cappuccino">
+          <img class="menu-img" src="cappuccino.jpeg" alt="Cappuccino">
           <div class="menu-item-info">
             <h4>Cappuccino</h4>
             <p>Freshly brewed espresso topped with steamed milk and foam.</p>
