@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Menu | CozyBite Restaurant</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | La Bella Cucina</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* General styles */
+    /* Base Styles */
     body {
       font-family: 'Open Sans', sans-serif;
       margin: 0;
@@ -14,14 +17,14 @@
       background: #f5f5f5;
       color: #333;
     }
-
+    
     header {
       background: #333;
       color: #fff;
       padding: 1rem 2rem;
       text-align: center;
     }
-
+    
     nav ul {
       list-style: none;
       padding: 0;
@@ -30,11 +33,7 @@
       gap: 2rem;
       margin: 1rem 0;
     }
-
-    nav li {
-      display: inline-block;
-    }
-
+    
     nav a {
       color: #fff;
       text-decoration: none;
@@ -43,23 +42,18 @@
       transition: all 0.3s ease;
       border-radius: 4px;
     }
-
-    nav a:hover {
+    
+    nav a:hover, nav a.active {
       background-color: #ff9800;
       color: white;
     }
-
-    nav a.active {
-      background-color: #ff9800;
-      color: white;
-    }
-
+    
     .menu-container {
       padding: 2rem;
       max-width: 1000px;
       margin: 0 auto;
     }
-
+    
     .menu-container h2 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
@@ -67,15 +61,15 @@
       border-bottom: 2px solid #ff9800;
       padding-bottom: 0.5rem;
     }
-
+    
     .menu-list {
       list-style: none;
       padding: 0;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
     }
-
+    
     .menu-list li {
       background: #fff;
       border-radius: 12px;
@@ -83,45 +77,45 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
+    
     .menu-list li:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
-
+    
     .menu-img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       transition: transform 0.4s ease;
     }
-
+    
     .menu-list li:hover .menu-img {
       transform: scale(1.05);
     }
-
+    
     .menu-item-info {
       padding: 1rem;
     }
-
+    
     .menu-item-info h4 {
       margin: 0.5rem 0;
       color: #222;
       font-size: 1.2rem;
     }
-
+    
     .menu-item-info p {
       font-size: 0.95rem;
       color: #666;
       margin-bottom: 0.5rem;
     }
-
+    
     .price {
       font-weight: bold;
       color: #ff9800;
       font-size: 1.1rem;
     }
-
+    
     .order-now {
       background-color: #ff9800;
       color: white;
@@ -135,17 +129,17 @@
       width: 100%;
       font-size: 1rem;
     }
-
+    
     .order-now:hover {
       background-color: #e68900;
     }
-
+    
     .quantity-selector {
       display: flex;
       align-items: center;
       margin: 1rem 0;
     }
-
+    
     .quantity-btn {
       background-color: #ddd;
       border: none;
@@ -156,11 +150,11 @@
       border-radius: 4px;
       transition: background-color 0.2s ease;
     }
-
+    
     .quantity-btn:hover {
       background-color: #ccc;
     }
-
+    
     .quantity-input {
       width: 50px;
       text-align: center;
@@ -170,20 +164,20 @@
       padding: 0.3rem;
       font-size: 1rem;
     }
-
+    
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
       animation: fadeInUp 0.5s forwards;
     }
-
+    
     @keyframes fadeInUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
+    
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -191,27 +185,27 @@
       color: #fff;
       margin-top: 3rem;
     }
-
+    
     @media (max-width: 768px) {
       .menu-list {
         grid-template-columns: 1fr;
       }
-
+      
       nav ul {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 0.5rem;
       }
-
+      
       nav a {
         padding: 0.5rem;
       }
-
+      
       .menu-container {
         padding: 1rem;
       }
     }
-
+    
     @media (max-width: 480px) {
       nav ul {
         flex-direction: column;
@@ -227,7 +221,7 @@
 </head>
 <body>
   <header>
-    <h1>CozyBite Restaurant</h1>
+    <h1>La Bella Cucina</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -237,92 +231,104 @@
       </ul>
     </nav>
   </header>
+
   <main class="menu-container">
     <section class="fade-in">
       <h2>Main Courses</h2>
       <ul class="menu-list">
+        <!-- Appetizers -->
         <li>
-          <img class="menu-img" src="grilled Chicken.jpeg" alt="Grilled Chicken">
+          <img class="menu-img" src="images/bruschetta.jpg" alt="Bruschetta">
           <div class="menu-item-info">
-            <h4>Grilled Chicken</h4>
-            <p>Succulent grilled chicken served with roasted vegetables and a choice of sauce.</p>
-            <div class="price">£8.50</div>
+            <h4>Bruschetta</h4>
+            <p>Toasted bread topped with tomatoes, garlic, and fresh basil</p>
+            <div class="price">£5.50</div>
             <div class="quantity-selector">
-              <button class="quantity-btn minus" onclick="updateQuantity('grilled-chicken', -1)">-</button>
-              <input type="number" id="grilled-chicken" class="quantity-input" value="1" min="1">
-              <button class="quantity-btn plus" onclick="updateQuantity('grilled-chicken', 1)">+</button>
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
             </div>
-            <button class="order-now" onclick="orderNow('Grilled Chicken', 'grilled-chicken')">Order Now</button>
+            <button class="order-now">Order Now</button>
           </div>
         </li>
+
+        <!-- Pasta -->
         <li>
-          <img class="menu-img" src="veggie pizza.jpg" alt="Veggie Pizza">
+          <img class="menu-img" src="images/spaghetti-carbonara.jpg" alt="Spaghetti Carbonara">
           <div class="menu-item-info">
-            <h4>Veggie Pizza</h4>
-            <p>Wood-fired pizza with bell peppers, onions, olives, and mozzarella.</p>
-            <div class="price">£7.00</div>
+            <h4>Spaghetti Carbonara</h4>
+            <p>Classic Roman pasta with eggs, cheese, pancetta, and black pepper</p>
+            <div class="price">£12.50</div>
             <div class="quantity-selector">
-              <button class="quantity-btn minus" onclick="updateQuantity('veggie-pizza', -1)">-</button>
-              <input type="number" id="veggie-pizza" class="quantity-input" value="1" min="1">
-              <button class="quantity-btn plus" onclick="updateQuantity('veggie-pizza', 1)">+</button>
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
             </div>
-            <button class="order-now" onclick="orderNow('Veggie Pizza', 'veggie-pizza')">Order Now</button>
+            <button class="order-now">Order Now</button>
           </div>
         </li>
+
+        <!-- Pizza -->
         <li>
-          <img class="menu-img" src="Lasagna.jpeg" alt="Lasagna">
-          <div class="menu-item-info">
-            <h4>Lasagna</h4>
-            <p>Classic beef lasagna layered with rich tomato sauce, creamy béchamel, and cheese.</p>
-            <div class="price">£8.20</div>
-            <div class="quantity-selector">
-              <button class="quantity-btn minus" onclick="updateQuantity('lasagna', -1)">-</button>
-              <input type="number" id="lasagna" class="quantity-input" value="1" min="1">
-              <button class="quantity-btn plus" onclick="updateQuantity('lasagna', 1)">+</button>
-            </div>
-            <button class="order-now" onclick="orderNow('Lasagna', 'lasagna')">Order Now</button>
-          </div>
-        </li>
-        <li>
-          <img class="menu-img" src="Margherita Pizza.jpeg" alt="Margherita Pizza">
+          <img class="menu-img" src="images/margherita-pizza.jpg" alt="Margherita Pizza">
           <div class="menu-item-info">
             <h4>Margherita Pizza</h4>
-            <p>Traditional Italian pizza with fresh basil, mozzarella, and tomato sauce.</p>
-            <div class="price">£6.50</div>
+            <p>Traditional pizza with tomato sauce, mozzarella, and basil</p>
+            <div class="price">£10.00</div>
             <div class="quantity-selector">
-              <button class="quantity-btn minus" onclick="updateQuantity('margherita-pizza', -1)">-</button>
-              <input type="number" id="margherita-pizza" class="quantity-input" value="1" min="1">
-              <button class="quantity-btn plus" onclick="updateQuantity('margherita-pizza', 1)">+</button>
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
             </div>
-            <button class="order-now" onclick="orderNow('Margherita Pizza', 'margherita-pizza')">Order Now</button>
+            <button class="order-now">Order Now</button>
           </div>
         </li>
+
+        <!-- Meat -->
         <li>
-          <img class="menu-img" src="spaghetti Bolognese.jpeg" alt="Spaghetti Bolognese">
+          <img class="menu-img" src="images/beef-tagliata.jpg" alt="Beef Tagliata">
           <div class="menu-item-info">
-            <h4>Spaghetti Bolognese</h4>
-            <p>Slow-cooked beef Bolognese sauce served over al dente spaghetti.</p>
-            <div class="price">£7.80</div>
+            <h4>Beef Tagliata</h4>
+            <p>Sliced steak with arugula, cherry tomatoes, and parmesan</p>
+            <div class="price">£16.00</div>
             <div class="quantity-selector">
-              <button class="quantity-btn minus" onclick="updateQuantity('spaghetti-bolognese', -1)">-</button>
-              <input type="number" id="spaghetti-bolognese" class="quantity-input" value="1" min="1">
-              <button class="quantity-btn plus" onclick="updateQuantity('spaghetti-bolognese', 1)">+</button>
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
             </div>
-            <button class="order-now" onclick="orderNow('Spaghetti Bolognese', 'spaghetti-bolognese')">Order Now</button>
+            <button class="order-now">Order Now</button>
           </div>
         </li>
+
+        <!-- Seafood -->
         <li>
-          <img class="menu-img" src="Rositto.jpg" alt="Mushroom Risotto">
+          <img class="menu-img" src="images/seafood-risotto.jpg" alt="Seafood Risotto">
           <div class="menu-item-info">
-            <h4>Mushroom Risotto</h4>
-            <p>Creamy Arborio rice cooked with wild mushrooms, white wine, and parmesan cheese.</p>
-            <div class="price">£9.00</div>
+            <h4>Seafood Risotto</h4>
+            <p>Creamy risotto with mixed seafood and white wine</p>
+            <div class="price">£14.50</div>
             <div class="quantity-selector">
-              <button class="quantity-btn minus" onclick="updateQuantity('mushroom-risotto', -1)">-</button>
-              <input type="number" id="mushroom-risotto" class="quantity-input" value="1" min="1">
-              <button class="quantity-btn plus" onclick="updateQuantity('mushroom-risotto', 1)">+</button>
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
             </div>
-            <button class="order-now" onclick="orderNow('Mushroom Risotto', 'mushroom-risotto')">Order Now</button>
+            <button class="order-now">Order Now</button>
+          </div>
+        </li>
+
+        <!-- Vegetarian -->
+        <li>
+          <img class="menu-img" src="images/eggplant-parmigiana.jpg" alt="Eggplant Parmigiana">
+          <div class="menu-item-info">
+            <h4>Eggplant Parmigiana</h4>
+            <p>Layered eggplant with tomato sauce and melted cheese</p>
+            <div class="price">£11.00</div>
+            <div class="quantity-selector">
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
+            </div>
+            <button class="order-now">Order Now</button>
           </div>
         </li>
       </ul>
@@ -332,65 +338,65 @@
       <h2>Desserts</h2>
       <ul class="menu-list">
         <li>
-          <img class="menu-img" src="tiramisu.jpeg" alt="Tiramisu">
+          <img class="menu-img" src="images/tiramisu.jpg" alt="Tiramisu">
           <div class="menu-item-info">
             <h4>Tiramisu</h4>
-            <p>Classic Italian dessert with mascarpone cream, espresso-soaked ladyfingers, and cocoa.</p>
-            <div class="price">£4.50</div>
+            <p>Classic Italian dessert with coffee-soaked ladyfingers</p>
+            <div class="price">£6.50</div>
             <div class="quantity-selector">
-              <button class="quantity-btn minus" onclick="updateQuantity('tiramisu', -1)">-</button>
-              <input type="number" id="tiramisu" class="quantity-input" value="1" min="1">
-              <button class="quantity-btn plus" onclick="updateQuantity('tiramisu', 1)">+</button>
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
             </div>
-            <button class="order-now" onclick="orderNow('Tiramisu', 'tiramisu')">Order Now</button>
+            <button class="order-now">Order Now</button>
           </div>
         </li>
         <li>
-          <img class="menu-img" src="chocolate Cake.jpeg" alt="Chocolate Cake">
+          <img class="menu-img" src="images/panna-cotta.jpg" alt="Panna Cotta">
           <div class="menu-item-info">
-            <h4>Chocolate Cake</h4>
-            <p>Rich and moist chocolate cake served with vanilla ice cream.</p>
-            <div class="price">£3.80</div>
+            <h4>Panna Cotta</h4>
+            <p>Creamy custard with berry coulis</p>
+            <div class="price">£5.50</div>
             <div class="quantity-selector">
-              <button class="quantity-btn minus" onclick="updateQuantity('chocolate-cake', -1)">-</button>
-              <input type="number" id="chocolate-cake" class="quantity-input" value="1" min="1">
-              <button class="quantity-btn plus" onclick="updateQuantity('chocolate-cake', 1)">+</button>
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
             </div>
-            <button class="order-now" onclick="orderNow('Chocolate Cake', 'chocolate-cake')">Order Now</button>
+            <button class="order-now">Order Now</button>
           </div>
         </li>
       </ul>
     </section>
 
     <section class="fade-in">
-      <h2>Beverages</h2>
+      <h2>Drinks</h2>
       <ul class="menu-list">
         <li>
-          <img class="menu-img" src="cappuccino.jpeg" alt="Cappuccino">
+          <img class="menu-img" src="images/italian-wine.jpg" alt="Italian Wine">
           <div class="menu-item-info">
-            <h4>Cappuccino</h4>
-            <p>Freshly brewed espresso topped with steamed milk and foam.</p>
-            <div class="price">£2.80</div>
+            <h4>House Wine</h4>
+            <p>Glass of our premium Italian red or white wine</p>
+            <div class="price">£6.00</div>
             <div class="quantity-selector">
-              <button class="quantity-btn minus" onclick="updateQuantity('cappuccino', -1)">-</button>
-              <input type="number" id="cappuccino" class="quantity-input" value="1" min="1">
-              <button class="quantity-btn plus" onclick="updateQuantity('cappuccino', 1)">+</button>
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
             </div>
-            <button class="order-now" onclick="orderNow('Cappuccino', 'cappuccino')">Order Now</button>
+            <button class="order-now">Order Now</button>
           </div>
         </li>
         <li>
-          <img class="menu-img" src="Orange Juice.jpeg" alt="Orange Juice">
+          <img class="menu-img" src="images/limoncello.jpg" alt="Limoncello">
           <div class="menu-item-info">
-            <h4>Orange Juice</h4>
-            <p>Freshly squeezed orange juice served chilled.</p>
-            <div class="price">£2.20</div>
+            <h4>Limoncello</h4>
+            <p>Traditional Italian lemon liqueur</p>
+            <div class="price">£4.50</div>
             <div class="quantity-selector">
-              <button class="quantity-btn minus" onclick="updateQuantity('orange-juice', -1)">-</button>
-              <input type="number" id="orange-juice" class="quantity-input" value="1" min="1">
-              <button class="quantity-btn plus" onclick="updateQuantity('orange-juice', 1)">+</button>
+              <button class="quantity-btn minus">-</button>
+              <input type="number" class="quantity-input" value="1" min="1">
+              <button class="quantity-btn plus">+</button>
             </div>
-            <button class="order-now" onclick="orderNow('Orange Juice', 'orange-juice')">Order Now</button>
+            <button class="order-now">Order Now</button>
           </div>
         </li>
       </ul>
@@ -398,25 +404,34 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 CozyBite Restaurant. All rights reserved.</p>
-    <p>123 Food Street, London, UK | Phone: 020 1234 5678</p>
+    <p>&copy; 2023 La Bella Cucina. All rights reserved.</p>
+    <p>Open Tuesday-Sunday: 5pm-11pm</p>
   </footer>
 
   <script>
-    function updateQuantity(id, change) {
-      const input = document.getElementById(id);
-      let newValue = parseInt(input.value) + change;
-      if (newValue < 1) newValue = 1;
-      input.value = newValue;
-    }
+    // Quantity selector functionality
+    document.querySelectorAll('.quantity-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const input = this.parentElement.querySelector('.quantity-input');
+        let value = parseInt(input.value);
+        if (this.classList.contains('minus')) {
+          input.value = value > 1 ? value - 1 : 1;
+        } else {
+          input.value = value + 1;
+        }
+      });
+    });
 
-    function orderNow(itemName, quantityId) {
-      const quantity = document.getElementById(quantityId).value;
-      alert(`You have ordered ${quantity} ${itemName}(s)! Thank you for your order!`);
-      // Here you would typically send this data to your backend
-    }
+    // Order now functionality
+    document.querySelectorAll('.order-now').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const item = this.closest('.menu-item-info').querySelector('h4').textContent;
+        const quantity = this.parentElement.querySelector('.quantity-input').value;
+        alert(`Ordered ${quantity} ${item}(s)! Thank you!`);
+      });
+    });
 
-    // Add fade-in animation to sections as they come into view
+    // Animation on scroll
     document.addEventListener('DOMContentLoaded', function() {
       const sections = document.querySelectorAll('.fade-in');
       
