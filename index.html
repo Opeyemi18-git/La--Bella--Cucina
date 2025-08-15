@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Welcome to La Bella Cucina | Authentic Italian Restaurant</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="index.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -52,7 +53,7 @@
     .food-icon {
       width: 80px;
       height: 80px;
-      background-image: url('logo .jpg');
+      background-image: url('logo.jpg');
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -144,6 +145,18 @@
       background-color: #102c1f;
       color: white;
       margin-top: 2rem;
+      line-height: 1.6;
+    }
+    
+    footer a {
+      color: #f4b400;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    footer a:hover {
+      color: white;
+      text-decoration: underline;
     }
     
     /* Cookie banner */
@@ -259,10 +272,8 @@
     <button onclick="acceptCookies()">Accept</button>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 La Bella Cucina Restaurant. All rights reserved.</p>
-  </footer>
+  <!-- Footer (content will be added by jQuery) -->
+  <footer></footer>
 
   <!-- Cookie Script -->
   <script>
@@ -278,5 +289,18 @@
     };
   </script>
 
+  <!-- jQuery Footer Script -->
+  <script>
+    $(document).ready(function() {
+      $("footer").html(`
+          <p>&copy; 2025 La Bella Cucina Restaurant. All rights reserved.</p>
+          <p>
+              📞 +44 7459 316293 | 
+              📧 <a href="mailto:opeyemivictor612@gmail.com">opeyemivictor612@gmail.com</a> | 
+              📍 10 Rosebery Avenue, EC1R 4TF, United Kingdom | 
+          </p>
+      `);
+    });
+  </script>
 </body>
 </html>
